@@ -7,6 +7,10 @@ app.get('/',(req,res) =>{
     res.send("HomePage")
 });
 
+app.get('/mengubah',(req,res) =>{
+    res.send("CPMK mata kuliah")
+});
+
 const userRouter = require("./routes/users")
 const rpsRouter = require("./routes/rps")
 
