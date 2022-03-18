@@ -20,7 +20,11 @@ app.get('/mengubah',(req,res) =>{
     res.send("CPMK mata kuliah")
 >>>>>>> 194fddf308425899ea711d5eda9610b29eed6972
 });
-
+=========
+ app.get('/mengeksport',(req,res) =>{
+     res.send("RPS jadi PDF")
+ });
+     
 const userRouter = require("./routes/users")
 const rpsRouter = require("./routes/rps")
 
