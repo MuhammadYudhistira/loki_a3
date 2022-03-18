@@ -5,6 +5,7 @@ app.set("view engine", "ejs")
 
 app.get('/',(req,res) =>{
     res.send("HomePage")
+    res.send("Test")
 });
 
 app.get('/mengubah',(req,res) =>{

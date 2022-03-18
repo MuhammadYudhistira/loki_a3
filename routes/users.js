@@ -13,8 +13,6 @@ router.get('/Account', (req,res) =>{
     res.send('Your Account')
 })
 
-
-
 router.put('/login', (req,res) =>{
     res.send("Login")
 });
