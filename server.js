@@ -17,12 +17,13 @@ app.get('/menambahkan',(req,res) =>{
  app.get('/mengeksport',(req,res) =>{
      res.send("RPS jadi PDF")
  });
-     
+
 const userRouter = require("./routes/users")
 const rpsRouter = require("./routes/rps")
+const cpmkRouter = require("./routes/cpmk")
 
 app.use("/users", userRouter)
 app.use("/rps", rpsRouter)
+app.use("/cpmk", cpmkRouter)
 
 app.listen(5000)
-
