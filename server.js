@@ -21,10 +21,12 @@ app.get('/menambahkan',(req,res) =>{
 const userRouter = require("./routes/users")
 const rpsRouter = require("./routes/rps")
 const referensiRouter = require("./routes/referensi")
+const penilaianRouter = require("./routes/penilaian")
 
 app.use("/users", userRouter)
 app.use("/rps", rpsRouter)
 app.use("/referensi", referensiRouter)
+app.use("/penilaian", penilaianRouter)
 
 app.listen(5000)
 
