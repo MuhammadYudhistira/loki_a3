@@ -1,0 +1,20 @@
+const express = require('express');
+const router = express.Router()
+
+router.get('/', (req,res) => {
+    res.send("rps list")
+})
+
+router.get('/pencarian_rps', (req,res)=> {
+    res.send("new rps")
+})
+
+router.get('/melihat_rps', (req,res)=> {
+    res.send("new rps")
+})
+
+router.get('/mengekspor_rps', (req,res)=> {
+    res.send("new rps")
+})
+
+module.exports = router;
