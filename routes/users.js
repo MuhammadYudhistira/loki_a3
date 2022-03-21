@@ -13,11 +13,11 @@ router.get('/Account', (req,res) =>{
     res.send('Your Account')
 })
 
-router.put('/login', (req,res) =>{
+router.post('/login', (req,res) =>{
     res.send("Login")
 });
 
-router.put('/logout', (req,res) =>{
+router.post('/logout', (req,res) =>{
     res.send("Logout")
 });
 
