@@ -13,8 +13,4 @@ router.get('/ubah', (req,res)=> {
     res.send("new rps")
 })
 
-router.get('/', (req,res)=> {
-    res.send("new rps")
-})
-
 module.exports = router;

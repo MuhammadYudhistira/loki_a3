@@ -5,15 +5,15 @@ router.get('/', (req,res) => {
     res.send("list mingguan")
 })
 
-router.get('/menambah pertemuan', (req,res)=> {
+router.get('/menambah-pertemuan', (req,res)=> {
     res.send("dosen menambah pertemuan mingguan rps")
 })
 
-router.get('/mengubah pertemuan', (req,res)=> {
+router.get('/mengubah-pertemuan', (req,res)=> {
     res.send("dosen mengubah pertemuan mingguan rps")
 })
 
-router.get('/menghapus pertemuan', (req,res)=> {
+router.get('/menghapus-pertemuan', (req,res)=> {
     res.send("dosen menghapus pertemuan mingguan rps")
 })
 

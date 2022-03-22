@@ -9,11 +9,11 @@ router.get('/menentukan_dosen', (req,res)=> {
     res.send("new rps")
 })
 
-router.get('/melihat_laporan ', (req,res) => {
+router.get('/melihat_laporan', (req,res) => {
     res.send("rps list")
 })
 
-router.get('/mencetak_laporan ', (req,res)=> {
+router.get('/mencetak_laporan', (req,res)=> {
     res.send("new rps")
 })
 
