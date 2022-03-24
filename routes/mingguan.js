@@ -9,15 +9,13 @@ router.get('/', (req,res) => {
 
 router.route('/:id')
 .get((req,res) =>{
-    
+  
 })
 .patch((req,res) =>{
-   
-
+ 
 })
 .delete((req,res) =>{
-   
-
+  
 })
 
 module.exports = router;
