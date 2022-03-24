@@ -7,11 +7,11 @@ router.get('/', (req,res) => {
     res.send("admin")
 })
 
-router.get('/menentukan_dosen', (req,res)=> {
+router.get('/menentukan-dosen', (req,res)=> {
     res.send("choose Dosen")
 })
 
-router.get('/melihat_laporan ', (req,res) => {
+router.get('/melihat-laporan', (req,res) => {
     let obj = {
         "matakuliah" : "pemograman web",
         "kode" : 123,
@@ -73,6 +73,7 @@ router.get('/melihat_laporan ', (req,res) => {
         ]
 
     }
+    res.json(obj)
 })
 
 router.get('/mencetak_laporan', (req,res)=> {
