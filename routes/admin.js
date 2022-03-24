@@ -4,11 +4,11 @@ const router = express.Router()
 router.use(express.json())
 
 router.get('/', (req,res) => {
-    res.send("rps list")
+    res.send("admin")
 })
 
 router.get('/menentukan_dosen', (req,res)=> {
-    res.send("new rps")
+    res.send("choose Dosen")
 })
 
 router.get('/melihat_laporan ', (req,res) => {
@@ -75,7 +75,7 @@ router.get('/melihat_laporan ', (req,res) => {
     }
 })
 
-router.get('/mencetak_laporan ', (req,res)=> {
+router.get('/mencetak_laporan', (req,res)=> {
     res.send("new rps")
 })
 
