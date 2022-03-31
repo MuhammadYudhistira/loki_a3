@@ -29,5 +29,6 @@ sequelize.define('Lectures', {
     },
     update_at : {
         type : DataTypes.DATE
+    }
     
-    });
+ });
