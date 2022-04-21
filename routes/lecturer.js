@@ -9,5 +9,16 @@ router.get('/', (req,res) => {
     res.send("lecturer page")
 })
 
-module.exports = router;
 
+router.get('/login', (req,res) =>{
+    //Authentication User
+
+    const username = req.body.username
+    const user = { name: username }
+
+    const accessToken = generateAccessToken(user)
+    res.json({accessToken: accessToken})
+
+})
+
+module.exports = router;
