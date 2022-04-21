@@ -71,9 +71,23 @@ router.get('/mencetak_laporan', (req,res)=> {
     res.send("new rps")
 })
 
+router.get('/login', (req,res) =>{
+    //Authentication User
+
+    const username = req.body.username
+    const user = { name: username }
+
+    const accessToken = generateAccessToken(user)
+    res.json({accessToken: accessToken})
+})
+
 router.get('/logout', (req,res)=>{
     refreshTokens = refreshTokens.filter(token => token!== req.body.token)
     res.sendStatus(204)
 })
+
+function generateAccessToken(username){
+    return jwt.sign(username, process.env.ACCES_TOKEN_SECRET, { expiresIn: '1000s'})
+}
 
 module.exports = router;
