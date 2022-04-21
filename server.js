@@ -1,11 +1,13 @@
+require('dotenv').config()
+
 const express = require('express');
 const app = express()
-
-app.use(express.json())
+const db = require('./config/db')
 
 app.get('/',(req,res) =>{
     res.send("HomePage")
 });
+
 
 const userRouter = require("./routes/user")
 const rpsRouter = require("./routes/rps")
