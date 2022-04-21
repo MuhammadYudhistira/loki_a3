@@ -71,4 +71,9 @@ router.get('/mencetak_laporan', (req,res)=> {
     res.send("new rps")
 })
 
+router.get('/logout', (req,res)=>{
+    refreshTokens = refreshTokens.filter(token => token!== req.body.token)
+    res.sendStatus(204)
+})
+
 module.exports = router;
