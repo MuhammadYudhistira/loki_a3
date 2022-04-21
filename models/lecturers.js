@@ -32,3 +32,5 @@ sequelize.define('Lectures', {
     }
     
  });
+
+ 
