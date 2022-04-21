@@ -35,3 +35,5 @@ sequelize.define('curricula', {
     }    
 
 });
+
+

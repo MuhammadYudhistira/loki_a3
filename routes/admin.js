@@ -71,7 +71,6 @@ router.get('/mencetak_laporan', (req,res)=> {
     res.send("new rps")
 })
 
-
 router.get('/login', (req,res) =>{
     //Authentication User
 
@@ -80,7 +79,11 @@ router.get('/login', (req,res) =>{
 
     const accessToken = generateAccessToken(user)
     res.json({accessToken: accessToken})
+})
 
+router.get('/logout', (req,res)=>{
+    refreshTokens = refreshTokens.filter(token => token!== req.body.token)
+    res.sendStatus(204)
 })
 
 function generateAccessToken(username){
