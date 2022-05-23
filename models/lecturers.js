@@ -1,7 +1,7 @@
-const { Sequelize, DataTypes, err } = require('sequelize');
-const sequelize = new Sequelize("mysql://root@localhost/loki")
+const { Sequelize, DataTypes} = require('sequelize');
+const sequelize = require("./dbconfig");
 
-sequelize.define('Lectures', {
+module.export = sequelize.define('Lectures', {
     id : {
         type : DataTypes.BIGINT,
         autoIncrement : true,
@@ -31,6 +31,4 @@ sequelize.define('Lectures', {
         type : DataTypes.DATE
     }
     
- });
-
- 
+});
