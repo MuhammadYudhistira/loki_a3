@@ -1,11 +1,12 @@
-const { Sequelize, DataTypes, err } = require('sequelize');
-const sequelize = new Sequelize("mysql://root@localhost/loki")
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = require("./dbconfig");
 
-sequelize.define('users', {
+const users = sequelize.define('users', {
     id : {
         type : DataTypes.BIGINT,
         allowNull : false,
-        primaryKey : true
+        primaryKey : true,
+        autoIncrement: true
     },
     name : {
         type : DataTypes.STRING,
@@ -13,32 +14,34 @@ sequelize.define('users', {
     },
     email : {
         type : DataTypes.STRING,
-        allowNull : false,
-        foreignKey : true
+        allowNull : false
     },
     email_verified_at : {
-        type : DataTypes.DATE,
-        allowNull : true,
+        type : DataTypes.STRING
     },
     password : {
         type : DataTypes.STRING,
         allowNull : false
     },
     remember_token : {
-        type : DataTypes.STRING,
-        allowNull : true
+        type : DataTypes.STRING
     },
     type : {
-        type : DataTypes.ENUM,
-        allowNull : false
+        type : DataTypes.ENUM('M','D','T'),
+        allowNull : false,
     },
     created_at : {
-        type : DataTypes.DATE,
-        allowNull : true
+        type : DataTypes.DATE  
     },
     updated_at : {
-        type : DataTypes.DATE,
-        allowNull : true
+        type : DataTypes.DATE
+        
     }
-})
-    
+}, {
+    tableName: 'users',
+    timestamps: true,
+    updatedAt: 'updated_at',
+    createdAt: 'created_at'
+
+});
+module.exports = users;

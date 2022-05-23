@@ -1,7 +1,7 @@
-const { Sequelize, DataTypes, err } = require('sequelize');
-const sequelize = new Sequelize("mysql://root@localhost/loki")
+const { Sequelize, DataTypes} = require('sequelize');
+const sequelize = require("./dbconfig");
 
-sequelize.define('curricula', {
+module.export = sequelize.define('curricula', {
     id : {
         type : DataTypes.BIGINT,
         allowNull : false,

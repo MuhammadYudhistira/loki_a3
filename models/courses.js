@@ -1,7 +1,8 @@
-const { Sequelize, DataTypes, err } = require('sequelize');
-const sequelize = new Sequelize("mysql://root@localhost/loki")
+const { Sequelize, DataTypes} = require('sequelize');
+const sequelize = require("./dbconfig");
+const curricula = require("./curricula")
 
-sequelize.define('courses', {
+module.export = sequelize.define('courses', {
     id : {
         type : DataTypes.BIGINT,
         allowNull : false,
@@ -10,7 +11,11 @@ sequelize.define('courses', {
     curriculum_id : {
         type : DataTypes.BIGINT,
         allowNull : false,
-        foreignKey : true 
+        foreignKey : true,
+        references :{
+            model : curricula,
+            key : 'id'
+        }
     },
     code : {
         type : DataTypes.STRING,
@@ -42,5 +47,9 @@ sequelize.define('courses', {
     updated_at : {
         type : DataTypes.DATE
     }
-
-})
+}) , {
+    tableName : 'courses',
+    timestamp : true,
+    updatedAt : 'updated_at',
+    createdAt : 'created_at'
+}
