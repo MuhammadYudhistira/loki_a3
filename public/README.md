@@ -1,145 +1,162 @@
-# [Argon Dashboard 2](http://demos.creative-tim.com/argon-dashboard/pages/dashboard.html?ref=readme-ad2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/argon-dashboard&text=Check%20Soft%20UI%20Dashboard%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#softdesign%20#html%20https://www.creative-tim.com/product/argon-dashboard) [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/FhCJCaHdQa)
+# [Volt - Bootstrap 5 Admin Dashboard](https://demo.themesberg.com/volt/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%2Fvolt-bootstrap-5-dashboard&via=themesberg&text=Volt%20-%20Open%20Source%20Bootstrap%205%20Admin%20Dashboard)
 
-![version](https://img.shields.io/badge/version-2.0.2-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/argon-dashboard.svg)](https://github.com/creativetimofficial/argon-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/argon-dashboard.svg)](https://github.com/creativetimofficial/argon-dashboard/issues?q=is%3Aissue+is%3Aclosed)
+[![version](https://img.shields.io/npm/v/@themesberg/volt-bootstrap-5-dashboard)](https://www.npmjs.com/package/@themesberg/volt-bootstrap-5-dashboard)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+[![GitHub issues open](https://img.shields.io/github/issues/themesberg/volt-bootstrap-5-dashboard.svg)](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues?q=is%3Aopen+is%3Aissue)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/volt-bootstrap-5-dashboard.svg)](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
-![Image](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/argon-dashboard-2.jpg)
+[![Volt Bootstrap 5 Dashboard Preview](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg)](https://demo.themesberg.com/volt/)
 
-Most complex and innovative Dashboard Made by [Creative Tim](https://creative-tim.com/). Check our latest Free Bootstrap 5 Dashboard.
+Volt is a free and open source Bootstrap 5 Admin Dashboard featuring over 100 components, 11 example pages and 3 customized plugins. Volt **does not require jQuery** as a dependency meaning that every library and script's are jQuery free.
 
-Designed for those who like bold elements and beautiful websites. Made of hundred of elements, designed blocks and fully coded pages, Argon Dashboard 2 is ready to help you create stunning websites and webapps.
+## Bootstrap 5 and Vanilla JavaScript
 
-We created many examples for pages like Sign In, Profile and so on. Just choose between a Basic Design, an illustration or a cover and you are good to go!
+Volt is built using the latest version of Bootstrap 5 and because [jQuery is no longer required as a dependency](https://themesberg.com/blog/tutorial/bootstrap-5-tutorial), Volt has been built using only Vanilla JS.
 
-**Fully Coded Elements**
+## 100+ Components
 
-Argon Dashboard 2 is built with over 70 frontend individual elements, like buttons, inputs, navbars, navtabs, cards or alerts, giving you the freedom of choosing and combining. All components can take variations in colour, that you can easily modify using SASS files and classes.
+Because it is created using the latest version of Bootstrap 5, every component and element is based on the latest Bootstrap 5 Sass variables and HTML markup. Check out the documentation of the components [here](https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/).
 
-You will save a lot of time going from prototyping to full-functional code, because all elements are implemented.
-This Free Bootstrap 5 Dashboard is coming with prebuilt design blocks, so the development process is seamless,
-switching from our pages to the real website is very easy to be done.
+## 11 Example pages
 
-View [all components here](https://www.creative-tim.com/learning-lab/bootstrap/alerts/argon-dashboard?ref=readme-ad2).
+We created no less than 11 advanced example pages such as the overview page, transactions, user settings, sign in and sign up and many more.
 
-**Documentation built by Developers**
+## Full documentation
 
-Each element is well presented in a very complex documentation.
-You can read more about the <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard" target="_blank">documentation here</a>.
+Every component, plugin and getting started is thoroughly documented on our [online documentation](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).
 
-**Example Pages**
+## Workflow
 
-If you want to get inspiration or just show something directly to your clients,
-you can jump start your development with our pre-built example pages. You will be able
-to quickly set up the basic structure for your web project.
-View <a href="https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html" target="_blank">example pages here</a>.
+This product is built using the following widely used technologies:
 
+- Most popular CSS Framework Bootstrap
+- Productive workflow tool Gulp
+- Awesome CSS preprocessor Sass
 
 ## Table of Contents
 
+* [Versions](#versions)
 * [Demo](#demo)
 * [Quick Start](#quick-start)
 * [Documentation](#documentation)
 * [File Structure](#file-structure)
 * [Browser Support](#browser-support)
 * [Resources](#resources)
+* [Upgrade to PRO](#upgrade-to-pro)
 * [Reporting Issues](#reporting-issues)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
 
-
-
 ## Versions
 
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://themesberg.com/product/dashboard/volt-react)[<img src="https://themesberg.s3.us-east-2.amazonaws.com/public/github/technology/laravel-logo.jpeg" width="60" height="60" />](https://themesberg.com/product/laravel/volt-admin-dashboard-template).
 
-
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/html-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-react)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-dashboard)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-angular)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/aspnet-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-asp-net)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nodejs-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-nodejs)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/laravel_logo.png" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-laravel)
-
-
-
-| HTML | React | Vue | Angular |
-| --- | --- | --- | --- |
-| [![Argon Dashboard HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/argon-dashboard.jpg)](https://www.creative-tim.com/product/argon-dashboard) | [![Argon Dashboard React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-react/argon-dashboard-react.jpg)](https://www.creative-tim.com/product/argon-dashboard-react) | [![Vue Argon Dashboard ](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-dashboard/vue-argon-dashboard.jpg)](https://www.creative-tim.com/product/vue-argon-dashboard) | [![Argon Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-angular/argon-dashboard-angular.jpg)](https://www.creative-tim.com/product/argon-dashboard-angular)
-
-| Asp.net | Node.js | Laravel |
-| --- | --- | --- |
-| [![Argon Dashboard Asp.net](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-aspnet/argon-dashboard-aspnet.jpg)](https://www.creative-tim.com/product/argon-dashboard-asp-net) | [![Argon Dashboard Node.js](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-nodejs/argon-dashboard-nodejs.jpg)](https://www.creative-tim.com/product/argon-dashboard-nodejs) | [![Argon Dashboard Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-laravel/argon-dashboard-laravel.jpg)](https://www.creative-tim.com/product/argon-dashboard-laravel) |
-
-
+| HTML | React  |
+| --- | ---  |
+| [![Volt Bootstrap 5 Dashboard HTML](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg)](https://demo.themesberg.com/volt/) | [![Volt React Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-react-dashboard/thumbnail.png)](https://github.com/themesberg/volt-react-dashboard)
 
 ## Demo
 
+| Dashboard | Transactions | Settings | Forms |
+| --- | --- | --- | --- |
+| [![Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/dashboard.jpg)](https://demo.themesberg.com/volt/pages/dashboard/dashboard.html) | [![Transactions](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/transactions.jpg)](https://demo.themesberg.com/volt/pages/transactions.html) | [![Settings](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/settings.jpg)](https://demo.themesberg.com/volt/pages/settings.html) | [![Forms](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/forms.jpg)](https://demo.themesberg.com/volt/pages/components/forms.html)
 
+| Sign in | Sign up | Forgot password | Reset password |
+| --- | --- | --- | --- |
+| [![Sign in](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/signin.jpg)](https://demo.themesberg.com/volt/pages/examples/sign-in.html) | [![Sign up](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/signup.jpg)](https://demo.themesberg.com/volt/pages/examples/sign-up.html) | [![Forgot Password](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/forgot-password.jpg)](https://demo.themesberg.com/volt/pages/examples/forgot-password.html) | [![Reset password](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/reset-password.jpg)](https://demo.themesberg.com/volt/pages/examples/reset-password.html)
 
-- [Dashboard page](https://demos.creative-tim.com/argon-dashboard/pages/dashboard)
-- [User profile page](https://demos.creative-tim.com/argon-dashboard/pages/profile)
-- [Tables page ](https://demos.creative-tim.com/argon-dashboard/pages/tables)
-- [RTL Page](https://demos.creative-tim.com/argon-dashboard/pages/rtl)
-- [Sign Up page](https://demos.creative-tim.com/argon-dashboard/pages/sign-up)
-- [Login page](https://demos.creative-tim.com/argon-dashboard/pages/sign-in)
+| Lock Profile | 404 Not Found | 500 Server Error | Documentation |
+| --- | --- | --- | --- |
+| [![Lock Profile](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/lock.jpg)](https://demo.themesberg.com/volt/pages/examples/lock.html) | [![404 Not Found](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/404.jpg)](https://demo.themesberg.com/volt/pages/examples/404.html) | [![500 Server Error](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/500.jpg)](https://demo.themesberg.com/volt/pages/examples/500.html) | [![Documentation](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/docs.jpg)](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/)
 
+-   [Live Preview](https://demo.themesberg.com/volt/)
+-   [Details](https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard)
 
-| Dashboard page | User profile page | Tables page  |
-| --- | --- | ---  |
-| [![Dashboard page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/dashboard.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/dashboard)  | [![User profile page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/profile.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/profile.html)  | [![Tables pages](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/tables.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/tables.html)
+## Quick start
 
-| RTL page | Sign Up page | Login page  |
-| --- | --- | ---  |
-| [![RTL page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/rtl.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/rtl.html)  | [![Sign Up page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/signup.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/sign-up.html)  | [![Login page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/signin.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/sign-in.html)
+1. Download from [Themesberg](https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard) or clone this repository
+2. Download the project's zip
+3. Make sure you have Node locally installed.
+4. Download Gulp Command Line Interface to be able to use gulp in your Terminal.
 
+```
+npm install gulp-cli -g
+```
 
+5. After installing Gulp, run npm install in the main `volt/` folder to download all the project dependencies. You'll find them in the `node_modules/` folder.
 
+```
+npm install
+```
 
+6. Run gulp in the `volt/` folder to serve the project files using BrowserSync. Running gulp will compile the theme and open `/index.html` in your main browser.
 
-## Download and Installation
+```
+gulp
+```
 
-- [Download from Github](https://github.com/creativetimofficial/argon-dashboard/archive/master.zip)
-- [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
+While the gulp command is running, files in the `assets/scss/`, `assets/js/` and `components/` folders will be monitored for changes. Files from the `assets/scss/` folder will generate injected CSS.
 
+Hit `CTRL+C` to terminate the gulp command. This will stop the local server from running.
 
-- Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
+## Theme without Sass, Gulp or npm
 
-- Install with Yarn: `yarn add @creative-tim-official/argon-dashboard-free`
+If you'd like to get a version of our theme without Sass, Gulp or npm, we've got you covered. Run the following command:
 
-- Install with Composer: `composer create-project creativetimofficial/argon-dashboard-free`
+```
+gulp build:dev
+```
 
-- Clone from Github: `git clone https://github.com/creativetimofficial/argon-dashboard.git`
+This will generate a folder `html&css` which will have unminified CSS, HTML and JavaScript.
 
+## Minified version
+
+If you'd like to compile the code and get a minified version of the HTML and CSS just run the following Gulp command:
+
+```
+gulp build:dist
+```
+
+This will generate a folder `dist` which will have minified CSS, HTML and JavaScript.
 
 ## Documentation
-
-The documentation for the Argon Dashboard is hosted at our [website](https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard).
+The documentation for Volt is hosted on our [website](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).
 
 ## File Structure
-
 Within the download you'll find the following directories and files:
 
 ```
-argon-dashboard
-  ├── assets
-  │   ├── css
-  │   ├── fonts
-  │   ├── img
-  │   ├── js
-  │   │   ├── core
-  │   │   ├── plugins
-  │   │   └── argon-dashboard.js
-  │   │   └── argon-dashboard.js.map
-  │   │   └── argon-dashboard.min.js
-  │   └── scss
-  │       ├── argon-dashboard
-  │       └── argon-dashboard.scss
-  ├── docs
-  │   ├── documentation.html
-  ├── pages
-  ├── CHANGELOG.md
-  ├── gulpfile.js
-  ├── package.json
+Volt Bootstrap 5 Admin Dashboard
+.
+├── README.md
+├── gulpfile.js
+├── package-lock.json
+├── package.json
+└── src
+    ├── assets
+    │   ├── img
+    │   └── js
+    ├── index.html
+    ├── pages
+    │   ├── components
+    │   ├── dashboard
+    │   ├── examples
+    │   ├── settings.html
+    │   ├── tables
+    │   └── transactions.html
+    ├── partials
+    │   ├── _analytics.html
+    │   ├── _footer.html
+    │   ├── _head.html
+    │   ├── _navigation.html
+    │   ├── _pages-preview.html
+    │   ├── _preloader.html
+    │   ├── _scripts.html
+    │   └── dashboard
+    └── scss
+        ├── volt
+        └── volt.scss
 ```
 
 ## Browser Support
@@ -149,52 +166,47 @@ At present, we officially aim to support the last two versions of the following 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
 ## Resources
+- Demo: <https://demo.themesberg.com/volt/>
+- Download Page: <https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard>
+- Documentation: <https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/>
+- License Agreement: <https://themesberg.com/licensing>
+- Support: <https://themesberg.com/contact>
+- Issues: [Github Issues Page](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues)
 
-- Demo: <https://demos.creative-tim.com/argon-dashboard>
-- Documentation: <https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard>
-- License Agreement: <https://www.creative-tim.com/license>
-- Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/argon-dashboard/issues)
+## Upgrade to Pro
+
+There is also a pro version of Volt which has more than 800 components, 20 example pages and over 10 advanced plugins that can take your admin dashboard application to the next level. Check out [Volt Pro Premium Bootstrap 5 Admin Dashboard](https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard).
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Argon Dashboard. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for Volt Bootstrap 5 Admin Dashboard. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Argon Dashboard. Check the CHANGELOG from your copy on our [website](https://www.creative-tim.com).
+1. Make sure that you are using the latest version of Volt Bootstrap 5 Admin Dashboard. Check the CHANGELOG from your dashboard on our [website](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/changelog/).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
+## Technical Support or Questions
+
+If you have questions or need help integrating the product please [contact us](https://themesberg.com/contact) instead of opening an issue.
+
 ## Licensing
 
-
-- Copyright &copy; 2022 Creative Tim (https://www.creative-tim.com)
-- Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
-
+- Copyright 2021 Themesberg (Crafty Dwarf LLC) (https://themesberg.com)
+- Themesberg [license](https://themesberg.com/licensing#mit) (MIT License)
 
 ## Useful Links
 
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=mk-github-readme) (earn money)
-- [Blog Creative Tim](http://blog.creative-tim.com/)
-- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=mk-github-readme) from Creative Tim
-- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=mk-github-readme) from Creative Tim
-- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=mk-github-readme) from Creative Tim
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=mk-github-readme) from Creative Tim
-- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=mk-github-readme) from Creative Tim
-- [More products](https://www.creative-tim.com/bootstrap-themes?ref=mk-github-readme) from Creative Tim
-- [Argon Design](https://www.creative-tim.com/design-system/argon)
-- Check our Bundles [here](https://www.creative-tim.com/bundles?ref=mk-github-readme)
-- [Get Discount](https://www.creative-tim.com/coupon)
+- [More themes](https://themesberg.com/themes) from Themesberg
+- [Free themes](https://themesberg.com/templates/free) from Themesberg
+- [Bootstrap Themes, Templates & UI Kits](https://themesberg.com/templates/bootstrap) from Themesberg
+- [Affiliate Program](https://themesberg.com/affiliate)
 
+##### Social Media
 
-## Social Media
+Twitter: <https://twitter.com/themesberg>
 
-Twitter: <https://twitter.com/CreativeTim>
+Facebook: <https://www.facebook.com/themesberg/>
 
-Facebook: <https://www.facebook.com/CreativeTim>
+Dribbble: <https://dribbble.com/themesberg>
 
-Dribbble: <https://dribbble.com/creativetim>
-
-TikTok: <https://tiktok.com/@creative.tim>
-
-Instagram: <https://instagram.com/creativetimofficial>
+Instagram: <https://www.instagram.com/themesberg/>
