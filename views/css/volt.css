@@ -25078,7 +25078,10 @@ label {
  * = Cards
  */
 .card {
-    position: relative;
+    padding: 1.5em .5em .5em;
+    border-radius: 2em;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
 .card .card-header {
@@ -25087,6 +25090,11 @@ label {
 
 .card.hover-state:hover {
     background-color: #E5E7EB;
+}
+
+.card-title{
+    font-weight: 700;
+    font-size: 1.5em;
 }
 
 .card .profile-cover {

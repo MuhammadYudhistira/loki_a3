@@ -1,11 +1,19 @@
-require('dotenv').config()
-
 const express = require('express');
-const router = express.Router()
-const jwt = ('jsonwebtoken')
+const router = express()
+
+router.set('view engine', 'ejs');
+router.use( express.static( "views" ) );
 
 router.get('/', (req,res) => {
-    res.send("admin")
+    res.render('dashboardAdmin')
+})
+
+router.get('/matakuliah', (req,res) => {
+    res.render('adminmatkul')
+})
+
+router.get('/dosen', (req,res)=> {
+    res.render('admindosen')
 })
 
 router.get('/menentukan-dosen', (req,res)=> {
@@ -13,81 +21,61 @@ router.get('/menentukan-dosen', (req,res)=> {
 })
 
 router.get('/melihat-laporan', (req,res) => {
-    let obj = {
-        "matakuliah" : "pemograman web",
-        "kode" : 123,
-        "sks" : 3,
-        "semester" : 4,
-        "cpps" : [
-            {
-                "kode" : "CP-1",
-                "Keterangan" : "Mengidentifikasi, memformulasikan dan memecahkan permasalahan kebutuhan informasi dari suatu organisasi"
+    // let obj = {
+    //     "matakuliah" : "pemograman web",
+    //     "kode" : 123,
+    //     "sks" : 3,
+    //     "semester" : 4,
+    //     "cpps" : [
+    //         {
+    //             "kode" : "CP-1",
+    //             "Keterangan" : "Mengidentifikasi, memformulasikan dan memecahkan permasalahan kebutuhan informasi dari suatu organisasi"
 
-            },
-            {
-                "kode" : "CP-2",	
-                "Keterangan" : "Mengintegrasikan solusi berbasis teknologi informasi secara efektif pada suatu organisasi"
-            },
-            {
-                "kode" : "CP-3",
-                "Keterangan" : "Menerapkan konsep-konsep dasar dalam merencanakan Sistem Informasi, merancang Sistem Informasi, membangun Sistem Informasi, mengoperasikan Sistem Informasi, dan mengevaluasi Sistem Informasi"
-            }
-        ],
-        "CPMK" : [
-            {
-                "Nomor" : "1", 
-                "Keterangan" : "Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web (CP-1, CP-2)"
-            },
-            {
-                "Nomor" : "2", 
-                "Keterangan" : "Mahasiswa mampu menggunakan salah satu technology stack untuk membangun aplikasi berbasis web (CP-1, CP-2)"
-            },
-            {
-                "Nomor" : "3", 
-                "Keterangan" : "Mahasiswa mampu menggunakan pemograman asynchronous . (CP-2, CP-3)"
-            },
-            {
-                "Nomor" : "4", 
-                "Keterangan" : "Mahasiswa mampu menerapkan keamanan untuk situs web . (CP-2, CP-3)"
-            },
-            {
-                "Nomor" : "5", 
-                "Keterangan" : "Mahasiswa mampu menggunakan dan mendesain format data JSON. (CP-2, CP-3)"
-            },
-            {
-                "Nomor" : "6", 
-                "Keterangan" : "Mahasiswa mampu deploy aplikasi web ke internet. (CP-2)"
-            },
-            {
-                "Nomor" : "7", 
-                "Keterangan" : "Mahasiswa mampu mendemonstrasikan keterampilan bekerja sama dengan tim (CP-3)"
-            }
-        ]
-    }
-    res.json(obj)
+    //         },
+    //         {
+    //             "kode" : "CP-2",	
+    //             "Keterangan" : "Mengintegrasikan solusi berbasis teknologi informasi secara efektif pada suatu organisasi"
+    //         },
+    //         {
+    //             "kode" : "CP-3",
+    //             "Keterangan" : "Menerapkan konsep-konsep dasar dalam merencanakan Sistem Informasi, merancang Sistem Informasi, membangun Sistem Informasi, mengoperasikan Sistem Informasi, dan mengevaluasi Sistem Informasi"
+    //         }
+    //     ],
+    //     "CPMK" : [
+    //         {
+    //             "Nomor" : "1", 
+    //             "Keterangan" : "Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web (CP-1, CP-2)"
+    //         },
+    //         {
+    //             "Nomor" : "2", 
+    //             "Keterangan" : "Mahasiswa mampu menggunakan salah satu technology stack untuk membangun aplikasi berbasis web (CP-1, CP-2)"
+    //         },
+    //         {
+    //             "Nomor" : "3", 
+    //             "Keterangan" : "Mahasiswa mampu menggunakan pemograman asynchronous . (CP-2, CP-3)"
+    //         },
+    //         {
+    //             "Nomor" : "4", 
+    //             "Keterangan" : "Mahasiswa mampu menerapkan keamanan untuk situs web . (CP-2, CP-3)"
+    //         },
+    //         {
+    //             "Nomor" : "5", 
+    //             "Keterangan" : "Mahasiswa mampu menggunakan dan mendesain format data JSON. (CP-2, CP-3)"
+    //         },
+    //         {
+    //             "Nomor" : "6", 
+    //             "Keterangan" : "Mahasiswa mampu deploy aplikasi web ke internet. (CP-2)"
+    //         },
+    //         {
+    //             "Nomor" : "7", 
+    //             "Keterangan" : "Mahasiswa mampu mendemonstrasikan keterampilan bekerja sama dengan tim (CP-3)"
+    //         }
+    //     ]
+    // }
+    // res.json(obj)
 })
 
 router.get('/mencetak_laporan', (req,res)=> {
     res.send("new rps")
 })
-
-router.get('/login', (req,res) =>{
-    //Authentication User
-
-    const username = req.body.username
-    const user = { name: username }
-
-    const accessToken = generateAccessToken(user)
-    res.json({accessToken: accessToken})
-})
-
-router.get('/logout', (req,res)=>{
-    refreshTokens = refreshTokens.filter(token => token!== req.body.token)
-    res.sendStatus(204)
-})
-
-function generateAccessToken(username){
-    return jwt.sign(username, process.env.ACCES_TOKEN_SECRET, { expiresIn: '1000s'})
-}
-
 module.exports = router;
