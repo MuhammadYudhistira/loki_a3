@@ -4,10 +4,20 @@ const express = require('express');
 const app = express()
 const db = require('./models/dbconfig')
 const controllers = require('./controller/indexcontrollers')
+const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser');
 app.use(express.json())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cookieParser());
+
+app.set('view engine', 'ejs');
+app.use( express.static( "views" ) );
+
 
 app.get('/',(req,res) =>{
-    res.send("HomePage")
+    res.render('index')
 })
 
 app.get('/users', controllers.users.retrieveAll)
@@ -31,7 +41,7 @@ app.use("/mingguan", mingguanRouter)
 app.use("/cpmk", cpmkRouter)
 app.use("/referensi", referensiRouter)
 app.use("/penilaian", penilaianRouter)
-app.use("/admin", authenticateToken, adminRouter)
+app.use("/admin",  adminRouter)
 app.use("/lecturer", authenticateToken, lecturerRouter)
 
 
