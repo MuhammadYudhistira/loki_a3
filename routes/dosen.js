@@ -1,5 +1,11 @@
 const express = require ('express')
 const router  = express.Router()
+
+
+router.get('/', (req,res) => {
+    res.render('dosendashboard')
+})
+
 // const { v4: uuidv4 } = require('uuid');
 
 // let users = []
@@ -42,5 +48,4 @@ const router  = express.Router()
 //     res.send(`user with the id ${id} deleted`)
 
 // })
-
 module.exports = router

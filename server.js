@@ -23,7 +23,7 @@ app.get('/',(req,res) =>{
 app.get('/users', controllers.users.retrieveAll)
 
 
-const userRouter = require("./routes/user")
+const dosenRouter = require("./routes/dosen")
 const rpsRouter = require("./routes/rps")
 const MahasiswaRouter = require("./routes/Mahasiswa")
 const mingguanRouter = require("./routes/mingguan")
@@ -34,7 +34,7 @@ const adminRouter = require("./routes/admin")
 const lecturerRouter = require('./routes/lecturer')
 const authenticateToken = require('./middleware/authenticationToken');
 
-app.use("/user", userRouter)
+app.use("/dosen", dosenRouter)
 app.use("/rps", rpsRouter)
 app.use("/Mahasiswa", MahasiswaRouter)
 app.use("/mingguan", mingguanRouter)
@@ -45,5 +45,5 @@ app.use("/admin",  adminRouter)
 app.use("/lecturer", authenticateToken, lecturerRouter)
 
 
-app.use('/', (req, res) => {res.send('Salah alamat')});
+app.use('/', (req, res) => {res.send('Salah alamat')})
 app.listen(5000, () => console.log("Server Running"))
