@@ -5,7 +5,11 @@ const router  = express.Router()
 router.get('/', (req,res) => {
     res.render('dosendashboard')
 })
+router.get('/cpmk', (req,res) => {
+    res.render('dosenCPMK')
+})
 
+<<<<<<< HEAD
 // const { v4: uuidv4 } = require('uuid');
 
 // let users = []
@@ -57,4 +61,9 @@ router.get('/mingguan', (req,res) => {
     res.render('dosenMingguan')
 })
 
+=======
+router.get('/detail', (req,res) => {
+    res.render('dosendetail')
+})
+>>>>>>> 0b245b0b23a36224c46b20c86503c5d2f21cbdb3
 module.exports = router
