@@ -6,6 +6,10 @@ router.get('/', (req,res) => {
     res.render('dosendashboard')
 })
 
+router.get('/detail', (req,res) => {
+    res.render('dosendetail')
+})
+
 // const { v4: uuidv4 } = require('uuid');
 
 // let users = []
