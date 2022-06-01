@@ -48,4 +48,10 @@ router.get('/', (req,res) => {
 //     res.send(`user with the id ${id} deleted`)
 
 // })
+
+router.get('/CPMK', (req,res) => {
+    res.render('dosenCPMK')
+})
+
 module.exports = router
+
