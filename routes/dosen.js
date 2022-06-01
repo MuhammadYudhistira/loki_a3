@@ -8,4 +8,8 @@ router.get('/', (req,res) => {
 router.get('/cpmk', (req,res) => {
     res.render('dosenCPMK')
 })
+
+router.get('/detail', (req,res) => {
+    res.render('dosendetail')
+})
 module.exports = router
