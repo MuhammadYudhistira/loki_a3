@@ -48,4 +48,13 @@ router.get('/', (req,res) => {
 //     res.send(`user with the id ${id} deleted`)
 
 // })
+
+router.get('/penilaian', (req,res) => {
+    res.render('dosenPenilaian')
+})
+
+router.get('/mingguan', (req,res) => {
+    res.render('dosenMingguan')
+})
+
 module.exports = router
