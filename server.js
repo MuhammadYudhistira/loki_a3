@@ -33,6 +33,7 @@ const penilaianRouter = require("./routes/penilaian")
 const adminRouter = require("./routes/admin")
 const lecturerRouter = require('./routes/lecturer')
 const authenticateToken = require('./middleware/authenticationToken');
+const authRouter = require("./routes/auth")
 
 app.use("/dosen", dosenRouter)
 app.use("/rps", rpsRouter)
@@ -42,6 +43,7 @@ app.use("/cpmk", cpmkRouter)
 app.use("/referensi", referensiRouter)
 app.use("/penilaian", penilaianRouter)
 app.use("/admin",  adminRouter)
+app.use("/auth",  authRouter)
 app.use("/lecturer", authenticateToken, lecturerRouter)
 
 
