@@ -6,6 +6,7 @@ const db = require('./models/dbconfig')
 const controllers = require('./controller/indexcontrollers')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
+
 app.use(express.json())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -47,5 +48,5 @@ app.use("/auth",  authRouter)
 app.use("/lecturer", authenticateToken, lecturerRouter)
 
 
-app.use('/', (req, res) => {res.send('Salah alamat')})
+app.use('/', (req, res) => {res.send('Alamat Palsu')})
 app.listen(5000, () => console.log("Server Running"))

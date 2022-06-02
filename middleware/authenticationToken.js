@@ -1,6 +1,6 @@
 require('dotenv').config
 const jwt = require('jsonwebtoken')
-const router = require('../routes/lecturer')
+
 
 function authenticateToken(req,res,next) {
     const authHeader = req.headers['authorization']
@@ -10,7 +10,6 @@ function authenticateToken(req,res,next) {
 
     jwt.verify(token, process.env.TOKEN_SECRET, (err, user) =>{
         if(err) return res.sendStatus(403)
-
         req.user = user
         next()
     })
