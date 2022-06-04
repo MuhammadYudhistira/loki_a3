@@ -27,7 +27,7 @@ const users = sequelize.define('users', {
         type : DataTypes.STRING
     },
     type : {
-        type : DataTypes.ENUM('M','D','A'),
+        type : DataTypes.ENUM('M','D','T'),
         allowNull : false,
     },
     created_at : {

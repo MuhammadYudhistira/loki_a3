@@ -1,0 +1,80 @@
+const User = require("../models/users");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
+const handleErrors = (err) => {
+  console.log(err.message, err.code);
+  let errors = { email: "", password: "" };
+
+  // duplicate email error
+  if (err.code === 11000) {
+    errors.email = "that email is already registered";
+    return errors;
+  }
+  // validation errors
+  if (err.message.includes("user validation failed")) {
+    Object.values(err.errors).forEach(({ properties }) => {
+      errors[properties.path] = properties.message;
+    });
+  }
+
+  return errors;
+};
+
+//JWT
+maxAge = 3 * 24 * 60 * 60;
+ms = 1000;
+const createToken = (email) => {
+  return jwt.sign({ email }, process.env.TOKEN_SECRET, { expiresIn: maxAge });
+};
+
+module.exports.register_get = (req, res) => {
+  res.render("register");
+};
+
+module.exports.login_get = (req, res) => {
+  res.render("login");
+};
+
+module.exports.register_post = async (req, res) => {
+  const { name, email, password, password2, type } = req.body;
+  if (password !== password2) return res.status(400).json({ msg: "Password dan Confirm Password tidak cocok" });
+  const salt = await bcrypt.genSalt();
+  const hashPass = await bcrypt.hash(password, salt);
+
+  try {
+    const user = await User.create({
+      name: name,
+      email: email,
+      password: hashPass,
+      type: type,
+    });
+    res.status(201).redirect("/auth/login");
+  } catch (err) {
+    const errors = handleErrors(err);
+    res.status(400).json({ errors });
+  }
+};
+
+module.exports.login_post = async (req, res) => {
+
+    //checking Email
+    const user = await User.findOne({ where: { email: req.body.email } })
+    if (!user) return res.status(400).send("Email tidak ditemukan")
+    //Cek Password
+    const validPass = await bcrypt.compare(req.body.password, user.password)
+    if (!validPass) return res.status(400).send("Password Salah")
+
+    const nama = user.name
+    const email = user.email
+    const type = user.type
+
+    const token = createToken(email)
+    res.cookie('jwt', token, {httponly: true, maxAge: maxAge * ms})
+    res.status(200).redirect('/admin')
+};
+
+module.exports.logout_get = (req, res) => {
+  res.cookie('jwt', '',{ maxAge: 1})
+  res.redirect('/')
+};
