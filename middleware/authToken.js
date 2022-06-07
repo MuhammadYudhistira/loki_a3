@@ -10,14 +10,14 @@ function authenticateToken(req,res,next) {
     jwt.verify(token, process.env.TOKEN_SECRET, (err, decodedToken) =>{
         if(err){
             console.log(err.message)
-            res.redirect('/auth/login')
+            res.render('500')
         }else{
             console.log(decodedToken);
             next()
         }
     })
 } else{
-    res.redirect('/auth/login')
+    res.render('500')
 }
 }
 

@@ -38,6 +38,6 @@ app.use("/auth", authRouter)
 // app.use("/lecturer", authenticateToken, lecturerRouter)
 
 app.use("/", (req, res) => {
-  res.send("Alamat Palsu")
+  res.render("404")
 })
 app.listen(5000, () => console.log("Server Running"))
