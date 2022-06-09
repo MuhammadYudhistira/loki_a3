@@ -28,5 +28,9 @@ router.get('/detail', (req,res) => {
 router.get('/CPMK', (req,res) => {
     res.render('dosenCPMK')
 })
+router.get('/matkul', (req,res) => {
+    res.render('mahasiswamatkul')
+})
+
 
 module.exports = router
