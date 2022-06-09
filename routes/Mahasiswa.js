@@ -14,4 +14,8 @@ router.get('/mengekspor_rps', (req,res)=> {
     res.send("new rps")
 })
 
+router.get('/matkul', (req,res) => {
+    res.render('mahasiswamatkul')
+})
+
 module.exports = router;
