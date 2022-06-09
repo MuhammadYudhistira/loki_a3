@@ -8,6 +8,10 @@ router.get('/', (req,res) => {
     res.render('dashboardAdmin')
 })
 
+router.get('/rps', (req,res) => {
+    res.render('')
+})
+
 router.get('/matakuliah', (req,res) => {
     res.render('adminmatkul')
 })

@@ -5,10 +5,6 @@ const authController = require("../controller/authContollers");
 router.set("view engine", "ejs");
 router.use(express.static("views"));
 
-router.get("/", (req, res) => {
-  res.send("");
-});
-
 router.get("/login", authController.login_get);
 router.post("/login", authController.login_post);
 router.get("/register", authController.register_get);

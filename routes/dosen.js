@@ -6,7 +6,7 @@ router.set('view engine', 'ejs');
 router.use( express.static( "views" ) );
 
 router.get('/', (req,res) => {
-    res.render('dosendashboard')
+    res.render('dashboardDosen')
 })
 router.get('/cpmk', (req,res) => {
     res.render('dosenCPMK')

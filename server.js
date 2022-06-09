@@ -6,7 +6,7 @@ const db = require("./models/dbconfig")
 const controllers = require("./controller/indexcontrollers")
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
-const authenticateToken = require("./middleware/authToken")
+const { authenticateToken, checkUser } = require("./middleware/authToken")
 
 app.use(express.json())
 app.use(bodyParser.json())
@@ -16,6 +16,9 @@ app.use(cookieParser())
 
 app.set("view engine", "ejs")
 app.use(express.static("views"))
+
+
+app.get("*", checkUser)
 
 app.get("/", (req, res) => {
   res.render("index")

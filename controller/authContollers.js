@@ -25,7 +25,7 @@ const handleErrors = (err) => {
 maxAge = 3 * 24 * 60 * 60;
 ms = 1000;
 const createToken = (email) => {
-  return jwt.sign({ email }, process.env.TOKEN_SECRET, { expiresIn: maxAge });
+  return jwt.sign(email, process.env.TOKEN_SECRET, { expiresIn: maxAge });
 };
 
 module.exports.register_get = (req, res) => {
@@ -64,17 +64,25 @@ module.exports.login_post = async (req, res) => {
     //Cek Password
     const validPass = await bcrypt.compare(req.body.password, user.password)
     if (!validPass) return res.status(400).send("Password Salah")
-
-    const nama = user.name
+    const name = user.name
     const email = user.email
     const type = user.type
 
-    const token = createToken(email)
+    const token = createToken({
+      email : email,
+      name : name,
+      type : type
+    })
     res.cookie('jwt', token, {httponly: true, maxAge: maxAge * ms})
-    res.status(200).redirect('/admin')
+    if(user.type == 'T'){
+      res.status(200).redirect('/admin')
+    }else if(user.type == 'D'){
+      res.status(200).redirect('/dosen/')
+    }
+    
 };
 
 module.exports.logout_get = (req, res) => {
   res.cookie('jwt', '',{ maxAge: 1})
-  res.redirect('/')
+  res.redirect('/auth/login')
 };
