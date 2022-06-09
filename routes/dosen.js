@@ -12,7 +12,7 @@ router.get('/revisi', (req,res) => {
     res.render('dosenrevisi')
 })
 router.get('/cpmk', (req,res) => {
-    res.render('dosenCPMK')
+    res.render('dosencpmk')
 })
 router.get('/penilaian', (req,res) => {
     res.render('dosenPenilaian')
