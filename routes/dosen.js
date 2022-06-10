@@ -14,6 +14,9 @@ router.get('/revisi', (req,res) => {
 router.get('/cpmk', (req,res) => {
     res.render('dosencpmk')
 })
+router.get('/referensi', (req,res) => {
+    res.render('dosenreferensi')
+})
 router.get('/penilaian', (req,res) => {
     res.render('dosenPenilaian')
 })

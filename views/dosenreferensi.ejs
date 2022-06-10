@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,9 @@
     <link type="text/css" href="../css/volt.css" rel="stylesheet">
     <title>Dasboard</title>
 </head>
+
 <body>
+
     <div id="app">
 
         <%- include('layout/header') %>
@@ -35,12 +38,88 @@
             </section>
         </div>
 
-        <a href="/dosen/cpmk" class="btn btn-secondary" type="button">CPMK</a><br>
-        <a href="/dosen/referensi" class="btn btn-secondary" type="button">Referensi</a><br>
-        <button class="btn btn-secondary" type="button">Komponen Penilaian</button>
-        <button class="btn btn-secondary" type="button">Pertemuan Mingguan</button>
+                        <!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-    <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Utama</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Matt Doyle, 2009, “Beginning PHP 5.3”, Wrox</td>
+    <td><div class="nav-wrapper position-relative">
+        <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
+            <li class="nav-item">
+                <a class="nav-link mb-sm-3 mb-md-0 active" data-bs-toggle="tab" href="#">Edit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mb-sm-3 mb-md-0" data-bs-toggle="tab" href="#">Hapus</a>
+            </li></button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><div class="nav-wrapper position-relative">
+        <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
+            <li class="nav-item">
+                <a class="nav-link mb-sm-3 mb-md-0 active" data-bs-toggle="tab" href="#">Tambah</a>
+            </li></td>
+    
+</table>
+
+<table>
+  <tr>
+    <th>Pendukung</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Mark Pilgrim, 2010, “HTML5 Up and Running”, O’Reilly</td>
+    <td><div class="nav-wrapper position-relative">
+        <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
+            <li class="nav-item">
+                <a class="nav-link mb-sm-3 mb-md-0 active" data-bs-toggle="tab" href="#">Edit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mb-sm-3 mb-md-0" data-bs-toggle="tab" href="#">Hapus</a>
+            </li></button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><div class="nav-wrapper position-relative">
+        <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
+            <li class="nav-item">
+                <a class="nav-link mb-sm-3 mb-md-0 active" data-bs-toggle="tab" href="#">Tambah</a>
+            </li></td>
+    
+</table>
+
+</body>
+</html>
+
+
+
+
+                            <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
                             <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
                             <!-- Vendor JS -->
@@ -81,6 +160,6 @@
 
                             <!-- Volt JS -->
                             <script src="../../assets/js/volt.js"></script>
-    
 </body>
+
 </html>
