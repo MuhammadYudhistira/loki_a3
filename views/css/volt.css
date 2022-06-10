@@ -7413,6 +7413,8 @@ textarea.form-control-lg {
     background-clip: border-box;
     border: 0.0625rem solid rgba(17, 24, 39, 0.125);
     border-radius: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
 }
 
 .card > hr {
@@ -25080,7 +25082,6 @@ label {
 .card {
     padding: 1.5em .5em .5em;
     border-radius: 2em;
-    text-align: center;
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 

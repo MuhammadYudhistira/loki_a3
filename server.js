@@ -23,11 +23,14 @@ app.get("*", checkUser)
 app.get("/", (req, res) => {
   res.render("index")
 });
+app.get("/datatable", (req, res) => {
+  res.render("datatabletemplate")
+});
 
 app.get("/users", controllers.users.retrieveAll)
 
 const dosenRouter = require("./routes/dosen")
-app.use("/dosen", dosenRouter)
+app.use("/dosen", authenticateToken,dosenRouter)
 
 const MahasiswaRouter = require("./routes/Mahasiswa")
 app.use("/Mahasiswa", MahasiswaRouter)
