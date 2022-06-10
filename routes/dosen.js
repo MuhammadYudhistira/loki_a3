@@ -18,11 +18,11 @@ router.get('/referensi', (req,res) => {
     res.render('dosenreferensi')
 })
 router.get('/penilaian', (req,res) => {
-    res.render('dosenPenilaian')
+    res.render('dosenpenilaian')
 })
 
 router.get('/mingguan', (req,res) => {
-    res.render('dosenMingguan')
+    res.render('dosenmingguan')
 })
 
 router.get('/detail', (req,res) => {
