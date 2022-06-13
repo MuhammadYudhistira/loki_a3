@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +9,7 @@
     <link type="text/css" href="../css/volt.css" rel="stylesheet">
     <title>Dasboard</title>
 </head>
-
 <body>
-
     <div id="app">
 
         <%- include('layout/header') %>
@@ -20,37 +17,28 @@
 
         <div id="main">
             <section class="section">
-                <div>
-                <a href="/dosen/revisi" class="btn btn-secondary" type="button">Revisi</a>
-            </div><br>
                 <div class="card">
                     <div class="card-header">
-                        
-                    <div class="card-body">
-                        <h4 class="card-title">Pemograman Berbasis Objek</h4>
-                        <div class="col-md-6">
-                            <div class="form-group row align-items-center">
-                                <div class="col-lg-4 col-3">
-                                    <label class="col-form-label"><h6>Kode Matkul</h6></label>
-                                </div>
-                                <div class="col-lg-5 col-9">
-                                    <p class="form-control-static" id="staticInput">Qwertyyyyyyyyyyyy</p>
-                                </div>
-                            </div>
-                        </div>
-                        
+                        <h4 class="card-title">Pemograman Web</h4>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                        
+                        <ul>
+                        <li>Kode Mata Kuliah : JSI62129</li>
+                        <li>Semester : 4</li>
+                        <li>SKS : 4</li>
+                        <li>Kurikulum : 2021</li>
+                        </ul>
+                    </div>
                 </div>
-                
-
-            </section>
         </div>
-            
 
+        <p><a href="/dosen/cpmk" class="btn btn-secondary" type="button">CPMK</a><br></p>
+        <p><a href="/dosen/referensi" class="btn btn-secondary" type="button">Referensi</a><br></p>
+        <p><a href="/dosen/penilaian" class="btn btn-secondary" type="button">Komponen Penilaian</a><br></p>
+        <p><a href="/dosen/mingguan" class="btn btn-secondary" type="button">Pertemuan Mingguan</a><br></p>
 
-
-                            <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
                             <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
                             <!-- Vendor JS -->
@@ -91,6 +79,6 @@
 
                             <!-- Volt JS -->
                             <script src="../../assets/js/volt.js"></script>
+    
 </body>
-
 </html>

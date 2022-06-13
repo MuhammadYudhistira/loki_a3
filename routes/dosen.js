@@ -20,17 +20,16 @@ router.get('/referensi', (req,res) => {
 router.get('/penilaian', (req,res) => {
     res.render('dosenpenilaian')
 })
-
 router.get('/mingguan', (req,res) => {
     res.render('dosenmingguan')
 })
-
 router.get('/detail', (req,res) => {
     res.render('dosendetail')
 })
 router.get('/CPMK', (req,res) => {
     res.render('dosenCPMK')
 })
-
-
+router.get('/edit', (req,res) => {
+    res.render('CPMKedit')
+})
 module.exports = router
