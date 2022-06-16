@@ -32,4 +32,10 @@ router.get('/CPMK', (req,res) => {
 router.get('/edit', (req,res) => {
     res.render('CPMKedit')
 })
+router.get('/hapus', (req,res) => {
+    res.render('CPMKhapus')
+})
+router.get('/tambah', (req,res) => {
+    res.render('CPMKtambah')
+})
 module.exports = router
