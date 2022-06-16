@@ -5,7 +5,7 @@ router.set('view engine', 'ejs');
 router.use( express.static( "views" ) );
 
 router.get('/', (req,res) => {
-    res.render('dashboardAdmin')
+    res.render('admin-dashboard')
 })
 
 router.get('/rps', (req,res) => {
@@ -13,11 +13,11 @@ router.get('/rps', (req,res) => {
 })
 
 router.get('/matakuliah', (req,res) => {
-    res.render('adminmatkul')
+    res.render('admin-listmatkul')
 })
 
 router.get('/dosen', (req,res)=> {
-    res.render('admindosen')
+    res.render('admin-memilihdosen')
 })
 
 router.get('/menentukan-dosen', (req,res)=> {
