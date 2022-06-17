@@ -29,13 +29,5 @@ router.get('/detail', (req,res) => {
 router.get('/CPMK', (req,res) => {
     res.render('dosenCPMK')
 })
-router.get('/edit', (req,res) => {
-    res.render('CPMKedit')
-})
-router.get('/hapus', (req,res) => {
-    res.render('CPMKhapus')
-})
-router.get('/tambah', (req,res) => {
-    res.render('CPMKtambah')
-})
+
 module.exports = router
