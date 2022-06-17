@@ -1,6 +1,8 @@
 const express = require('express');
-const router = express.Router()
+const router = express()
 
+router.set('view engine', 'ejs');
+router.use( express.static( "public" ) );
 
 router.get('/pencarian_rps', (req,res)=> {
     res.send("new rps")

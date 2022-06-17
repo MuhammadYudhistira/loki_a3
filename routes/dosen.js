@@ -3,7 +3,7 @@ const router  = express()
 
 
 router.set('view engine', 'ejs');
-router.use( express.static( "views" ) );
+router.use( express.static( "public" ) );
 
 router.get('/', (req,res) => {
     res.render('dosendashboard')

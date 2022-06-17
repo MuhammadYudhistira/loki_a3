@@ -33,7 +33,7 @@
             <!-- Modal Content -->
             <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form"
                 aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-dialog modal-dialog-top" role="document">
                     <div class="modal-content">
                         <div class="modal-body p-0">
                             <div class="card p-3 p-lg-4">
@@ -48,10 +48,9 @@
                                         <label for="email">Nama Dosen</label>
                                         <div class="input-group">
                                             <select class="form-select">
-                                                <option value="Husnil Kamil">Husnil Kamil</option>
-                                                <option value="Hasdi Putra">Hasdi Putra</option>
-                                                <option value="Fajril Akbar">Fajril Akbar</option>
-                                                <option value="Ricky Akbar">Ricky Akbar</option>
+                                                <% dosen.forEach(dsn => { %>                                                     
+                                                    <option value="<%= dsn.name %>"><%= dsn.name %> </option>
+                                                <% }) %>
                                             </select>
                                         </div> <br>
                                         <div class="d-grid">

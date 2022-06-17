@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.set("view engine", "ejs")
-app.use(express.static("views"))
+app.use(express.static("public"))
 
 
 app.get("*", checkUser)

@@ -3,7 +3,7 @@ const router = express();
 const authController = require("../controller/authContollers");
 
 router.set("view engine", "ejs");
-router.use(express.static("views"));
+router.use(express.static("public"));
 
 router.get("/login", authController.login_get);
 router.post("/login", authController.login_post);

@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express()
+const controller = require('../controller/indexcontrollers')
 
 router.set('view engine', 'ejs');
-router.use( express.static( "views" ) );
+router.use( express.static( "public" ) );
 
 router.get('/', (req,res) => {
     res.render('admin-dashboard')
@@ -16,13 +17,7 @@ router.get('/matakuliah', (req,res) => {
     res.render('admin-listmatkul')
 })
 
-router.get('/dosen', (req,res)=> {
-    res.render('admin-memilihdosen')
-})
-
-router.get('/menentukan-dosen', (req,res)=> {
-    res.send("choose Dosen")
-})
+router.get("/dosen", controller.lecturers.tampilMenentukanDosen);
 
 router.get('/melihat-laporan', (req,res) => {
 })
