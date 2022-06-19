@@ -65,21 +65,23 @@ tr:nth-child(even) {
             <!-- Modal Content -->
             <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form"
                 aria-hidden="true">
-                <div class="modal-dialog modal-dialog-top" role="document">
+                <div class="modal-dialog" role="document">
+                    
                     <div class="modal-content">
+                        <div class="modal-header">
+                                    <h1 class="mb-0 h4">CPMK</h1>
+                                </div>
                         <div class="modal-body p-0">
                             <div class="card p-3 p-lg-4">
                                 <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
-                                <div class="text-center text-md-center mb-4 mt-md-0">
-                                    <h1 class="mb-0 h4">CPMK</h1>
-                                </div>
                                 <form action="#" class="mt-4">
                                     <!-- Form -->
-                                    <div class="form-group mb-4">
-                                        <label for="email">Mengubah CPMK</label>
+                                    <div class="modal-body">
+                                        <label>Mengubah CPMK</label>
                                         <div class="form-group">
-                                           <textarea class="form-group"  id="textarea"  cols="50" rows="3" value="">Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web (CP-1, CP-2)</textarea>
+                                           <input type="text" placeholder="Masukkan komponen penilaian"
+                                    class="form-control">
                                         </div> <br>
                                         <div class="d-grid">
                                             <button type="submit" class="btn btn-gray-800">Simpan</button>
