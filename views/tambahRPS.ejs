@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="../vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link type="text/css" href="../vendor/notyf/notyf.min.css" rel="stylesheet">
+    <link type="text/css" href="../css/volt.css" rel="stylesheet">
+    <title>Dasboard</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <%- include('layout/header') %>
+        <%- include('layout/sidebar') %>
+
+        <div id="main">
+          <h3>Menambah RPS</h3>
+          <section class="section">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Identitas Mata Kuliah</h4>
+                </div>
+                <div class="card-body">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nama Mata Kuliah:</label>
+            <input type="kode"  id="exampleFormControlInput1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Kode</label>
+            <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+         <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Rumpun/Kelompok MK</label>
+          <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label class="my-1 me-2" for="country">Bobot (sks)</label>
+          <select class="form-select" id="country" aria-label="Default select example">
+          <option selected>sks</option>
+          <option value="1">2</option>
+          <option value="2">3</option>
+          <option value="3">4</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="my-1 me-2" for="country">Semester</label>
+          <select class="form-select" id="country" aria-label="Default select example">
+          <option selected>Semester</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
+          <option value="3">6</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Tgl Penyusunan</label>
+          <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        
+      
+          
+        <P><div class="card-header"></P>
+          <h4 class="card-title">Otorisasi</h4>
+        </div>
+        <div class="card-body">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Dosen Pengembang RPS</label>
+            <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
+         </div>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Koordinator Rumpun MK</label>
+            <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
+           </div>
+           <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Ka Program Studi</label>
+          <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
+          </div>
+
+          <P><div class="card-header"></P>
+            <h4 class="card-title">Capaian Pembelajaran (CP)</h4>
+          </div>
+          <div class="card-body">
+          </div>
+        <div class="mb-3">
+          <h5></h5>
+          <label for="exampleFormControlInput1" class="form-label">Dosen Pengembang RPS</label>
+          <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Koordinator Rumpun MK</label>
+          <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
+         </div>
+        <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Ka Program Studi</label>
+        <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+          </div>
+            </section>
+        </div>
+
+                            <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+                            <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+                            <!-- Vendor JS -->
+                            <script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+
+                            <!-- Slider -->
+                            <script src="../../vendor/nouislider/distribute/nouislider.min.js"></script>
+
+                            <!-- Smooth scroll -->
+                            <script src="../../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+                            <!-- Charts -->
+                            <script src="../../vendor/chartist/dist/chartist.min.js"></script>
+                            <script src="../../vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js">
+                            </script>
+
+                            <!-- Datepicker -->
+                            <script src="../../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+                            <!-- Sweet Alerts 2 -->
+                            <script src="../../vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+                            <!-- Moment JS -->
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js">
+                            </script>
+
+                            <!-- Vanilla JS Datepicker -->
+                            <script src="../../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+                            <!-- Notyf -->
+                            <script src="../../vendor/notyf/notyf.min.js"></script>
+
+                            <!-- Simplebar -->
+                            <script src="../../vendor/simplebar/dist/simplebar.min.js"></script>
+
+                            <!-- Github buttons -->
+                            <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+                            <!-- Volt JS -->
+                            <script src="../../assets/js/volt.js"></script>
+</body>
+
+</html>

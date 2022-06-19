@@ -29,5 +29,8 @@ router.get('/detail', (req,res) => {
 router.get('/CPMK', (req,res) => {
     res.render('dosenCPMK')
 })
+router.get('/tambah', (req,res) => {
+    res.render('tambahRPS')
+})
 
 module.exports = router
