@@ -42,6 +42,11 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.box{
+   margin-bottom:10px; 
+}
+
 </style>
 </head>
 <body>
@@ -63,9 +68,9 @@ tr:nth-child(even) {
     <td><p>1. Pengenalan WEB:</p>
             <p>a. Web dan Hypertext Document</p>
             <p>b. Protokol HTTP (method dan status message)</p>
-            <p>c. Client side (front-end)</p>
-            <p>d. Server side (back-end)</p>
-            <p>e. Interaksi client side dengan server side</p>
+            <p>c. <i>Client side (front-end)</i></p>
+            <p>d. <i>Server side (back-end)</i></p>
+            <p>e. Interaksi <i>client side</i> dengan <i>server side</i></p>
     </td>
     <td>Presentasi Dosen dan diskusi (3 x 50 mnt)</td>
     <td>Mahasiswa memberikan tanggapan tentang konsep dasar dan komponen aplikasi berbasis web</td>
@@ -76,9 +81,12 @@ tr:nth-child(even) {
         <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
             <li class="nav-item">
                 <!-- Button Modal -->
+            <div class="box">
             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form">
                 
-              edit</button>
+              Edit</button>
+            </div>
+              
           <!-- Modal Content -->
           <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form"
               aria-hidden="true">
@@ -96,9 +104,9 @@ tr:nth-child(even) {
                                   <div class="form-group mb-4">
                                       <label for="email">Minggu Ke-</label>
                                       <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
+                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
                                       </div>
-                                      <label for="email">Kemampuan Yang Diharapkan</label>
+                                      <label for="email">Kemampuan yang Diharapkan</label>
                                       <div class="form-group">
                                          <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
                                       </div>
@@ -182,9 +190,9 @@ tr:nth-child(even) {
               <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
                   <li class="nav-item">
                       <!-- Button Modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form">
-                
-              edit</button>
+                      <div class="box">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form"> Edit</button>
+                        </div>
           <!-- Modal Content -->
           <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form"
               aria-hidden="true">
@@ -204,7 +212,7 @@ tr:nth-child(even) {
                                       <div class="form-group">
                                          <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
                                       </div>
-                                      <label for="email">Kemampuan Yang Diharapkan</label>
+                                      <label for="email">Kemampuan yang Diharapkan</label>
                                       <div class="form-group">
                                          <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
                                       </div>
@@ -297,9 +305,9 @@ tr:nth-child(even) {
                                       <div class="form-group">
                                          <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
                                       </div>
-                                      <label for="email">Kemampuan Yang Diharapkan</label>
+                                      <label for="email">Kemampuan yang Diharapkan</label>
                                       <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
+                                         <textarea class="form-group" name="" id="" cols="30" rows="6"></textarea>
                                       </div>
                                       <label for="email">Bahan Kajian & Referensi</label>
                                       <div class="form-group">
