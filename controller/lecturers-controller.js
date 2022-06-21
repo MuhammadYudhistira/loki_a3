@@ -1,4 +1,4 @@
-const model = require('../models/index-model');
+const model = require('../models/indexmodel');
 const controller = {};
 
 

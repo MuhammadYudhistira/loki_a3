@@ -5,24 +5,10 @@ const controller = require('../controller/indexcontrollers')
 router.set('view engine', 'ejs');
 router.use( express.static( "public" ) );
 
-router.get('/', (req,res) => {
-    res.render('admin-dashboard')
-})
+router.get("/", controller.admin.dashboard)
+router.get("/matakuliah", controller.admin.matakuliah)
+router.get("/lihat-laporan", controller.admin.laporan)
+router.get("/dosen", controller.lecturers.tampilMenentukanDosen)
+router.get("/dosen:id", controller.lecturers.tampilMenentukanDosen)
 
-router.get('/rps', (req,res) => {
-    res.render('')
-})
-
-router.get('/matakuliah', (req,res) => {
-    res.render('admin-listmatkul')
-})
-
-router.get("/dosen", controller.lecturers.tampilMenentukanDosen);
-
-router.get('/melihat-laporan', (req,res) => {
-})
-
-router.get('/mencetak_laporan', (req,res)=> {
-    res.send("new rps")
-})
 module.exports = router;

@@ -1,55 +1,77 @@
-const { Sequelize, DataTypes} = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require("./dbconfig");
-const curricula = require("./curricula")
+const curricula = require("./curricula");
 
-module.export = sequelize.define('courses', {
-    id : {
+const courses = sequelize.define('courses' ,
+{
+    id:
+    {
         type : DataTypes.BIGINT,
-        allowNull : false,
-        primaryKey : true
+        allowNull: false,
+        primaryKey : true,
+        autoIncrement: true
     },
-    curriculum_id : {
+
+    curriculum_id:
+    {
         type : DataTypes.BIGINT,
-        allowNull : false,
-        foreignKey : true,
-        references :{
-            model : curricula,
-            key : 'id'
+        allowNull: false,
+        references: {
+          model: curricula,
+          key: 'id'
         }
     },
-    code : {
+
+    code:
+    {
         type : DataTypes.STRING,
-        allowNull : false
+        allowNull: false 
+    }, 
+
+    name:
+    {
+        type : DataTypes.TEXT,
+        allowNull: false 
     },
-    name : {
-        type : DataTypes.STRING,
-        allowNull : false
+
+    alias_name:
+    {
+        type : DataTypes.TEXT
     },
-    alias_name : {
-        type : DataTypes.STRING,
-        allowNull : true
-    },
-    credit : {
+
+    credit:
+    {
         type : DataTypes.INTEGER,
         allowNull : false
     },
-    semester : {
+
+    semester:
+    {
         type : DataTypes.INTEGER,
         allowNull : false
     },
-    description : {
-        type : DataTypes.STRING,
-        allowNull : true
+
+    description:
+    {
+        type : DataTypes.TEXT
     },
-    created_at : {
-        type : DataTypes.DATE
+
+    created_at:
+    {
+        type : DataTypes.DATE,
     },
-    updated_at : {
-        type : DataTypes.DATE
+
+    updated_at:
+    {
+        type : DataTypes.DATE,
     }
-}) , {
-    tableName : 'courses',
-    timestamp : true,
-    updatedAt : 'updated_at',
-    createdAt : 'created_at'
-}
+
+}, {
+    tableName: 'courses',
+    timestamps: true,
+    updatedAt: 'updated_at',
+    createdAt: 'created_at'
+
+});
+
+module.exports = courses;

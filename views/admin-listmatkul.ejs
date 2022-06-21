@@ -32,49 +32,28 @@
                 <table class="table datatable">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Kode Matakuliah</th>
+                      <th scope="col">Kode Mata kuliah</th>
                       <th scope="col">Nama Mata Kuliah</th>
+                      <th scope="col">SKS</th>
+                      <th scope="col">Semester</th>
+                      <th scope="col">Kurikulum</th>
                       <th scope="col">Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>SI101</td>
-                      <td>Pemograman Web</td>
-                      <td>
+                    <% matkul.forEach(mtkl => { %>
+                      <tr>
+                          <input type="hidden" name="id" value="<%= mtkl.id %>">
+                          <td><%= mtkl.code %> </td>
+                          <td><%= mtkl.name %> </td>
+                          <td><%= mtkl.credit %> </td>
+                          <td><%= mtkl.semester %> </td>
+                          <td> 
                         <a class="btn btn-secondary" type="button" href="/admin/dosen">Dosen</a>
-                        <a class="btn btn-secondary" type="button" href="#"">Laporan</a>
+                        <a class="btn btn-secondary" type="button" href="/admin/lihat-laporan"">Laporan</a>
                       </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>SI102</td>
-                        <td>Struktur Data dan Algoritma</td>
-                        <td>
-                          <a class="btn btn-secondary" type="button" href="/admin/dosen">Dosen</a>
-                          <a class="btn btn-secondary" type="button" href="#"">Laporan</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>SI103</td>
-                        <td>Data Mining</td>
-                        <td>
-                          <a class="btn btn-secondary" type="button" href="/admin/dosen">Dosen</a>
-                          <a class="btn btn-secondary" type="button" href="#"">Laporan</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>SI104</td>
-                        <td>Perancangan Basis Data</td>
-                        <td>
-                          <a class="btn btn-secondary" type="button" href="/admin/dosen">Dosen</a>
-                          <a class="btn btn-secondary" type="button" href="#"">Laporan</a>
-                        </td>
-                      </tr>
+                    <%}) %>
                   </tbody>
                 </table>
   
