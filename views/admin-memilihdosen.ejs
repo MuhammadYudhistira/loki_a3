@@ -39,12 +39,14 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                            <form method="post">
                             <label class="my-1 me-2" for="dosen" >Nama Dosen</label><br>
                             <select class="form-select" id="dosen" aria-label="Default select example">
                                 <% dosen.forEach(dsn => { %>                                                     
                                     <option value="<%= dsn.name %>"><%= dsn.name %> </option>
                                 <% }) %>
                             </select>
+                        </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary">Tambah</button>
@@ -76,8 +78,9 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <% for(var i = 0; i< 3; i++){ %>
                     <tr>
-                      <th scope="row">1</th>
+                      <td><% i+1 %></td>
                       <td>11111111</td>
                       <td>Husnil Kamil</td>
                       <td>
@@ -102,6 +105,7 @@
                 
                       </td>
                     </tr>
+                    <% } %>
                   </tbody>
                 </table>
                 </div>

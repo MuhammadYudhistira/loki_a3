@@ -1,27 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="../vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
-    <link type="text/css" href="../vendor/notyf/notyf.min.css" rel="stylesheet">
-    <link type="text/css" href="../css/volt.css" rel="stylesheet">
-    <title>Dasboard</title>
-</head>
-<body>
-    <div id="app">
-
-        <%- include('layout/header') %>
-        <%- include('layout/sidebar') %>
-
-        <div id="main">
+<%- include('layout/head', {judul: 'Revisi'}) %>
+<div class="d-block mb-4 mb-md-0">
+    <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+        <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+            <li class="breadcrumb-item">
+                <a href="/dosen">
+                    <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/dosen">RPS Mata kuliah</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/dosen/detail">Detail Mata kuliah</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Revisi</li>
+        </ol>
+    </nav>
+</div>
             <section class="section">
-                
-        <a href="/dosen/cpmk" class="btn btn-secondary" type="button">CPMK</a>
-        <a href="/dosen/referensi" class="btn btn-secondary" type="button">Referensi</a>
-        <a href="/dosen/penilaian" class="btn btn-secondary" type="button">Komponen Penilaian</a>
-        <a href="/dosen/mingguan" class="btn btn-secondary" type="button">Pertemuan Mingguan</a><br><br>
+                <h2 class="h2">Revisi RPS Matakuliah</h2>
+                <a href="/dosen/cpmk" class="btn btn-secondary" type="button">CPMK</a>
+                <a href="/dosen/referensi" class="btn btn-secondary" type="button">Referensi</a>
+                <a href="/dosen/penilaian" class="btn btn-secondary" type="button">Komponen Penilaian</a>
+                <a href="/dosen/mingguan" class="btn btn-secondary" type="button">Pertemuan Mingguan</a><br><br>
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Pemograman Web</h4>

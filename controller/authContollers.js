@@ -28,6 +28,10 @@ const createToken = (email) => {
   return jwt.sign(email, process.env.TOKEN_SECRET, { expiresIn: maxAge });
 };
 
+module.exports.home = (req, res) => {
+  res.redirect("/auth/login");
+};
+
 module.exports.register_get = (req, res) => {
   res.render("register");
 };
