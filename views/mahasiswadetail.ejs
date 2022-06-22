@@ -1,4 +1,24 @@
 <%- include('layout/headM', {judul: 'Detail Mata Kuliah'}) %>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        border:2px solid gray
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+}
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        border:2px solid gray
+        
+      }
+
+    </style>
+   
             <section class="section">
               <div>
                 
@@ -23,5 +43,63 @@
                     </div>
                 </div>
         </div>
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Pemograman Web</h4>
+            </div>
+            <div class="card-body">
+        <table>        
+            <tr>
+                <td>Logo</td>
+                <th colspan="5">RENCANA PEMBELAJARAN SEMESTER (RPS)<br> PROGRAM STUDI : Sistem Informasi<br> FAKULTAS /PPs: Teknologi Informasi <br>UNIVERSITAS ANDALAS </th>
+            </tr>
+            <tr>
+                <th>Mata Kuliah</th>
+                <th>Kode</th>
+                <th>Rumpun/Kelompok MK</th>
+                <th>Bobot(SKS)</th>
+                <th>Semester </th>
+                <th>Tanggal Penyusunan</th>
+            </tr>
+
+            <tr>
+                <th>Pemograman Web</th>
+                <th></th>
+                <th></th>
+                <th>3</th>
+                <th>4</th>
+                <th>2021</th>
+            </tr>
+
+            <tr>
+                <td style="background-color: #fcfcfc" rowspan="3"><b>OTORISASI</b></td>
+                <td><b>Dosen Pengembang RPS</b></td>
+                <td></td>
+                <td><b>Koordinator Rumpun MK</b></td>
+                <td></td>
+                <td><b>Ka Program Studi</b></td>
+            <tr>
+            
+            
+                <tr height="40px">
+                    <th style="background-color: #fcfcfc"></th>
+                    <th colspan="2" style="background-color: #fcfcfc"></th>
+                    <th colspan="2" style="background-color: #fcfcfc"></th>
+                <tr>
+
+            <tr>
+                <th rowspan="11" style="background-color: #fcfcfc" colspan="6">Capaian Pembelajaran(CP)</th>
+                
+            </tr>
+
+        <tbody>
+            <tr>
+                <th rowspan="11" style="background-color: #fcfcfc" colspan="6">Capaian Pembelajaran(CP) MK</th>
+            </tr>
+        </tbody>
+        <tr>
+            <th rowspan="11" style="background-color: #fcfcfc" colspan="6">Deskripsi Mata Kuliah</th>
+        </tr>
+    </table>
 
         <%- include('layout/foot-datatable') %>
