@@ -32,5 +32,8 @@ router.get('/CPMK', (req,res) => {
 router.get('/tambah', (req,res) => {
     res.render('tambahRPS')
 })
+router.get('/edit', (req,res) => {
+    res.render('dosenedit')
+})
 
 module.exports = router
