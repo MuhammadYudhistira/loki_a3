@@ -4,21 +4,13 @@ const jwt = require("jsonwebtoken");
 
 const handleErrors = (err) => {
   console.log(err.message, err.code);
-  let errors = { email: "", password: "" };
-
+  let errors = { email: "that email is already registered" }
   // duplicate email error
   if (err.code === 11000) {
-    errors.email = "that email is already registered";
-    return errors;
-  }
-  // validation errors
-  if (err.message.includes("user validation failed")) {
-    Object.values(err.errors).forEach(({ properties }) => {
-      errors[properties.path] = properties.message;
-    });
+    return errors.email;
   }
 
-  return errors;
+  return errors.email;
 };
 
 //JWT
@@ -47,7 +39,7 @@ module.exports.register_post = async (req, res) => {
   const hashPass = await bcrypt.hash(password, salt);
 
   try {
-    const user = await User.create({
+    await User.create({
       name: name,
       email: email,
       password: hashPass,
@@ -55,8 +47,7 @@ module.exports.register_post = async (req, res) => {
     });
     res.status(201).redirect("/auth/login");
   } catch (err) {
-    const errors = handleErrors(err);
-    res.status(400).json({ errors });
+    console.log(err)
   }
 };
 

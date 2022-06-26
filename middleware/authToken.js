@@ -1,8 +1,9 @@
 require('dotenv').config
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const { DECIMAL } = require('sequelize');
 const User = require("../models/users");
 
-function authenticateToken(req,res,next) {
+function isAdmin(req,res,next) {
 
     const token = req.cookies.jwt
 
@@ -13,7 +14,31 @@ function authenticateToken(req,res,next) {
             console.log(err.message)
             res.render('500')
         }else{
-            console.log(decodedToken);
+            // console.log(decodedToken);
+            const type = decodedToken.type
+            if(type != 'T') return res.render('500')
+            next()
+        }
+    })
+} else{
+    res.render('500')
+    }
+}
+
+function isDosen(req,res,next) {
+
+    const token = req.cookies.jwt
+
+    if(token){
+
+    jwt.verify(token, process.env.TOKEN_SECRET, (err, decodedToken) =>{
+        if(err){
+            console.log(err.message)
+            res.render('500')
+        }else{
+            // console.log(decodedToken);
+            const type = decodedToken.type
+            if(type != 'D') return res.render('500')
             next()
         }
     })
@@ -32,17 +57,20 @@ const checkUser = (req,res,next) =>{
             res.locals.user = null
             next()
           } else {
-            console.log(decodedToken);
-            let user = await User.findByPk(decodedToken.email)
-            res.locals.user= decodedToken
+            res.locals.user = decodedToken
+            res.locals.email = decodedToken.email
+            res.locals.nama = decodedToken.nama
+            res.locals.type = decodedToken.type
             next();
           }
         });
     }else{
         res.locals.user = null
+        res.locals.nama = 'Mahasiswa'
+        res.locals.type = 'M'
         next()
     }
 }
 
 
-module.exports = { authenticateToken, checkUser }
+module.exports = { isAdmin, isDosen , checkUser }
