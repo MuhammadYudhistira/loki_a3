@@ -1,13 +1,13 @@
 const express = require ('express')
 const router  = express()
+const controller = require('../controller/indexcontrollers')
 
 
 router.set('view engine', 'ejs');
 router.use( express.static( "public" ) );
 
-router.get('/', (req,res) => {
-    res.render('dosendashboard')
-})
+router.get('/', controller.dosen.listmatkul)
+
 router.get('/revisi', (req,res) => {
     res.render('dosenrevisi')
 })

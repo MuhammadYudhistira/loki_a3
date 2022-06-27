@@ -21,11 +21,12 @@ app.get("*", checkUser)
 app.get("/", (req, res) => {
   res.render("index")
 });
+app.get("/myprofile", (req, res) => {
+  res.render("myprofile")
+});
 app.get("/datatable", (req, res) => {
   res.render("datatabletemplate")
 });
-
-app.get("/users", controllers.users.retrieveAll)
 
 const dosenRouter = require("./routes/dosen")
 app.use("/dosen", isDosen,dosenRouter)
@@ -38,8 +39,6 @@ app.use("/admin", isAdmin, adminRouter)
 
 const authRouter = require("./routes/auth")
 app.use("/auth", authRouter)
-
-// app.use("/lecturer", authenticateToken, lecturerRouter)
 
 app.use("/", (req, res) => {
   res.render("404")
