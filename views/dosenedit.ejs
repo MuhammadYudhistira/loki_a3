@@ -1,54 +1,113 @@
-<%- include('layout/head', {judul: 'Edit'}) %>
-<div class="d-block mb-4 mb-md-0">
-    <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
-        <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-            <li class="breadcrumb-item">
-                <a href="/dosen">
-                    <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
-                        </path>
-                    </svg>
-                </a>
-            </li>
-
-            <li class="breadcrumb-item">
-                <a href="/dosen">RPS Mata kuliah</a>
-            </li>
-
-            <li class="breadcrumb-item">
-                <a href="/dosen/detail">Detail Mata kuliah</a>
-            </li>
-
-            <li class="breadcrumb-item active" aria-current="page">
-                Edit
-            </li>
-        </ol>
-    </nav>
-</div>
-
-            <section class="section">
-                <h2 class="h2">Edit RPS Matakuliah</h2>
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Pemograman Web</h4>
-                    </div>
-
-                    <div class="card-body">                      
-                        <ul>
-                            <li>Kode Mata Kuliah : JSI62125</li>
-                            <li>Semester : 4</li>
-                            <li>SKS : 3</li>
-                            <li>Kurikulum : 2021</li>
-                        </ul>                      
-                        <a href="/dosen/cpmk" class="btn btn-secondary" type="button">CPMK</a>
-                        <a href="/dosen/referensi" class="btn btn-secondary" type="button">Referensi</a>
-                        <a href="/dosen/penilaian" class="btn btn-secondary" type="button">Komponen Penilaian</a>
-                        <a href="/dosen/mingguan" class="btn btn-secondary" type="button">Pertemuan Mingguan</a><br><br>                       
-                    </div>
+<%- include('layout/head', {judul: 'Tambah RPS'}) %>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+          <div class="d-block mb-4 mb-md-0">
+              <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                  <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                      <li class="breadcrumb-item">
+                          <a href="/dosen">
+                              <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                  </path>
+                              </svg>
+                          </a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="/dosen"> RPS Mata Kuliah
+                        </a>
+                    </li>
+                      <li class="breadcrumb-item active" aria-current="page">Tambah RPS Mata kuliah</li>
+                  </ol>
+              </nav>
+          </div>
+      </div>
+        <div id="main">
+          <h2 class="h2">Edit RPS Mata kuliah</h2>
+          <section class="section">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Identitas Mata Kuliah</h4>
                 </div>
+                <div class="card-body">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nama Mata Kuliah</label>
+            <input type="kode" class="form-control"  id="exampleFormControlInput1">
         </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Kode</label>
+            <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+         <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Rumpun/Kelompok MK</label>
+          <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label class="my-1 me-2" for="sks">Bobot (sks)</label>
+          <select class="form-select" id="sks" aria-label="Default select example">
+          <option selected>sks</option>
+          <option value="1">2</option>
+          <option value="2">3</option>
+          <option value="3">4</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="my-1 me-2" for="country">Semester</label>
+          <select class="form-select" id="country" aria-label="Default select example">
+          <option selected>Semester</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
+          <option value="3">6</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Tgl Penyusunan</label>
+          <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        
+      
+          
+        <P><div class="card-header"></P>
+          <h4 class="card-title">Otorisasi</h4>
+        </div>
+        <div class="card-body">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Dosen Pengembang RPS</label>
+            <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
+         </div>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Koordinator Rumpun MK</label>
+            <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
+           </div>
+           <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Ka Program Studi</label>
+          <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
+          </div>
 
-<%- include('layout/foot') %>
+          <P><div class="card-header"></P>
+            <h4 class="card-title">Capaian Pembelajaran (CP)</h4>
+          </div>
+          <div class="card-body">
+          </div>
+        <div class="mb-3">
+          <h5></h5>
+          <label for="exampleFormControlInput1" class="form-label">Dosen Pengembang RPS</label>
+          <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Koordinator Rumpun MK</label>
+          <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
+         </div>
+        <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Ka Program Studi</label>
+        <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        </section>
+          </div>
 
+
+        <%- include('layout/foot-datatable') %>
