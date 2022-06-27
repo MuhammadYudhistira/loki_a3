@@ -19,6 +19,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Dosen</li>
                 </ol>
             </nav>
+            <h2 class="h2">List Dosen</h2>
         </div>
         <div class="btn-toolbar mb-2 mb-md-0">
             <!-- Button Modal -->
@@ -87,11 +88,11 @@
                             <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
-                                        <form action="/admin/hapusdosenmatkul" method="post"></form>
                                         <div class="modal-header">
                                             <h2 class="h6 modal-title">Peringatan</h2>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
+                                        <form action="/admin/hapusdosen" method="post">
                                         <div class="modal-body">
                                             <p>Apakah Anda Yakin ingin Menghapus?</p>
                                             <input type="hidden" name="idrps" value="<%=dosen.course_plan_id %>">

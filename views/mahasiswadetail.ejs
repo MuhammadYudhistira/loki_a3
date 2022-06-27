@@ -30,14 +30,14 @@
             </div>
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Pemograman Web</h4>
+                        <h4 class="card-title"><%=matkul.name %></h4>
                     </div>
                     <div class="card-body">
                         
                         <ul>
-                        <li>Kode Mata Kuliah : JSI62129</li>
-                        <li>Semester : 4</li>
-                        <li>SKS : 4</li>
+                        <li>Kode Mata Kuliah : <%=matkul.code %></li>
+                        <li>Semester : <%=matkul.semester%></li>
+                        <li>SKS : <%=matkul.credit%></li>
                         <li>Kurikulum : 2021</li>
                         </ul>
                     </div>
@@ -45,7 +45,7 @@
         </div>
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Pemograman Web</h4>
+                <h4 class="card-title">RPS</h4>
             </div>
             <div class="card-body">
         <table>        
@@ -63,12 +63,12 @@
             </tr>
 
             <tr>
-                <th>Pemograman Web</th>
+                <th><%=matkul.name %></th>
+                <th><%=matkul.code %></th>
                 <th></th>
-                <th></th>
-                <th>3</th>
-                <th>4</th>
-                <th>2021</th>
+                <th><%=matkul.credit%></th>
+                <th><%=matkul.semester%></th>
+                <th><%=matkul.updated_at%></th>
             </tr>
 
             <tr>
@@ -102,4 +102,4 @@
         </tr>
     </table>
 
-        <%- include('layout/foot-datatable') %>
+    <%- include('layout/foot-datatable') %>

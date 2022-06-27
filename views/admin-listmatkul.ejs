@@ -19,37 +19,35 @@
                 <h2 class="h2">List Mata Kuliah</h2>
             </div>
             <div class="btn-toolbar mb-2 mb-md-0">
-              <!-- Button Modal -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-tambahmatkul">
+       
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-tambahmatkul">
                   <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                   Tambah</button>
-              <!-- Modal Content -->
-              <div class="modal fade" id="modal-tambahmatkul" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                
+                <div class="modal fade" id="modal-tambahmatkul" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                <div class="modal-dialog" role="document">
                       <div class="modal-content">
                           <div class="modal-header">
                               <h2 class="h6 modal-title">Tambah Matakuliah</h2>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
+                          <form action="/admin/tambahmatkul" method="post">
                           <div class="modal-body">
-                            <form action="/admin/tambahmatkul" method="post">
                                               <label>Pilih Kurikulum </label>
                                               <div class="form-group">
                                                   <select class="form-select" name="kurikulum" required>
-                                                      <% kurikulum.forEach(krklm => { %>                                                     
-                                                          <option value="<%= krklm.id %>"><%= krklm.name %> </option>
+                                                      <% kurikulum.forEach(kurikulum => { %>                                                     
+                                                          <option value="<%= kurikulum.id %>"><%= kurikulum.name %> </option>
                                                       <% }) %>
                                                   </select>
                                               </div>
                                               <label>Kode Mata Kuliah </label>
                                               <div class="input-group mb-3">
-                                                  <!-- <input type="text" placeholder="Masukkan kode mata kuliah" name="kodeMatkul" required
-                                                      class="form-control"> -->
-                                                      <span class="input-group-text" id="basic-addon1">JSI</span>
+                                                 
                                                       <input type="text" class="form-control" placeholder="Masukkan kode mata kuliah" name="kodeMatkul" required>
                                               </div>
                                               <label>Nama Mata Kuliah </label>
@@ -64,7 +62,7 @@
                                               </div>
                                               <label>Jumlah SKS</label>
                                               <div class="form-group">
-                                                  <select class="form-select" name="bobotSKS" required>                                                    
+                                                  <select class="form-select" name="SKS" required>                                                    
                                                           <option >Pilih Jumlah SKS</option>
                                                           <option value="1">1</option>
                                                           <option value="2">2</option>
@@ -99,7 +97,7 @@
                                                           id="floatingTextarea"></textarea>
                                                       
                                                   </div> -->
-                                              </form>
+                                              
                                                 </div>
                                           <div class="modal-footer">
                                               <button type="reset" class="btn btn-light-secondary" data-bs-dismiss="modal">
@@ -111,7 +109,8 @@
                                                   <span class="d-none d-sm-block">Tambah</span>
                                               </button>
                                           </div>
-                                      </div>
+                                        </form>
+                                        </div>
                                   </div>
                           </div>
                           </div>
@@ -146,7 +145,7 @@
                           <td><%= mtkl.semester %> </td>
                           <td> 
                         <a class="btn btn-secondary" type="button" href="/admin/dosen-<%=mtkl.id%>">Dosen</a>
-                        <a class="btn btn-secondary" type="button" href="/admin/lihat-laporan-<%=mtkl.id%>"">Laporan</a>
+                        <a class="btn btn-secondary" type="button" href="/admin/lihat-laporan-<%=mtkl.id%>">Laporan</a>
                       </td>
                     </tr>
                     <%}) %>
@@ -158,6 +157,5 @@
           </div>
         </div>
       </section>
-  </main>
 
   <%- include('layout/foot-datatable') %>

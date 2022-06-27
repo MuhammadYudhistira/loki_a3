@@ -21,38 +21,44 @@
         </nav>
         <h2 class="h2">Laporan RPS</h2>
     </div>
-    <div class="btn-group ms-2 ms-lg-3">
-        <button type="button" class="btn btn-sm btn-outline-gray-600">Share</button>
-        <button type="button" class="btn btn-sm btn-outline-gray-600">Export</button>
-    </div>
 </div>
             <section class="section">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Matakuliah</h4>
+                        <h4 class="card-title"><%=matkul.name %></h4>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col bg-soft">
-                                <label for="">Kode</label>
-                                <p> asdasd</p>
+                                <p>Kode : <%=matkul.code%></p>
                             </div>
                             <div class="col bg-soft">
-                                <label for="">Jumlah Revisi </label>
-                                <p>asdas</p>
+                                <p>Jumlah Revisi : <%=matkul.ref%></p>
                             </div>
                             <div class="w-100"></div>
                             <div class="col bg-soft">
-                                <label for="">SKS </label>
-                                <p>asdas</p></div>
+                                <p>SKS : <%=matkul.credit%></p></div>
                             <div class="col bg-soft">
-                                <label for="">Semester </label>
-                                <p>asdas</p>
+                                <p>Semester : <%=matkul.semester%></p>
                             </div>
                           </div>
                         </div>
-                      </div>
+                    </div> <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Peta CPL ke CPMK</h4>
                     </div>
+                    <div class="card-body">
+                        </div>
+                </div><br>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Presentase Metode RPS</h4>
+                    </div>
+                    <div class="card-body">
+                        </div>
                 </div>
+
             </section>
 <%- include('layout/foot') %>
