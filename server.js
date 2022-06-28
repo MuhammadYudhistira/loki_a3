@@ -2,7 +2,6 @@ require("dotenv").config()
 
 const express = require("express")
 const app = express()
-const controllers = require("./controller/indexcontrollers")
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
 const { isAdmin, isDosen , checkUser } = require("./middleware/authToken")

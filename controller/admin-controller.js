@@ -12,11 +12,11 @@ controller.listMatakuliah = async (req, res) => {
 
 controller.tambahMatkul = async (req, res) => {
 
-    const { kurikulum,  kodeMatkul, nama, alias, SKS, semester, deskripsi } = req.body;
+    const { kurikulum,  kodeMatkul, nama, alias, SKS, semester, deskripsi } = req.body
 
     const matkulAda = await model.courses.findOne({ 
-        where:{[Op.or]: [{ code: req.body.kodeMatkul }, { name: req.body.nama }]} });
-    if (matkulAda) return res.status(400).send('Mata Kuliah sudah ada');
+        where:{[Op.or]: [{ code: req.body.kodeMatkul }, { name: req.body.nama }]} })
+    if (matkulAda) return res.status(400).send('Mata Kuliah sudah ada')
 
 
     try {
@@ -28,13 +28,13 @@ controller.tambahMatkul = async (req, res) => {
             credit: SKS,
             semester: semester,
             description: deskripsi
-        });
+        })
 
         const id_course = await model.courses.findOne({where:{ code: kodeMatkul }, attributes: ['id']})
         await model.course_plans.create({
             curriculum_id: kurikulum,
             course_id: id_course.id,
-            rev: -1,
+            rev: 0,
             code: kodeMatkul,
             name: nama,
             alias_name: alias,
@@ -42,9 +42,9 @@ controller.tambahMatkul = async (req, res) => {
             semester: semester,
             description: deskripsi
         });
-        res.redirect('back');
+        res.redirect('back')
     } catch (error) {
-        console.log(error);
+        console.log(error)
     }
 
     

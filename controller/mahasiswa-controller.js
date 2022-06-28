@@ -13,7 +13,7 @@ controller.listMatakuliah = async (req, res) => {
 controller.detailrps = async (req, res) => {
     const id = req.params.id
     const matkul = await model.courses.findOne({ where: { id: id }})
-    res.render('mahasiswadetail', {matkul});
+    res.render('mahasiswadetail', {matkul})
 }
 
 module.exports = controller;

@@ -16,71 +16,56 @@
                 <a href="/dosen">RPS Mata kuliah</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/dosen/detail">Detail Mata kuliah</a>
+                <a href="/dosen/detail-<%=rps.id %>">Detail Mata kuliah</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/dosen/revisi">Revisi</a>
+                <a href="/dosen/detail-<%=rps.id %>/revisi">Revisi</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Referensi</li>
         </ol>
     </nav>
     <h2 class="h2">Referensi Matakuliah</h2>
 
-<style>
-
-.box{
-    margin-left: 7px ;
-}
-</style>
-</div>
             <section class="section">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Pemograman Web</h4>
-                    </div>
-                    <div class="card-body">
-                        
-                        <ul>
-                        <li>Kode Mata Kuliah : JSI62129</li>
-                        <li>Semester : 4</li>
-                        <li>SKS : 4</li>
-                        <li>Kurikulum : 2021</li>
-                        </ul>
+                        <h4 class="card-title"><%=rps.name %></h4>
                     </div>
                 <div class="card-body">
                     <!-- Button Modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#referensi" style="float: right;" >Tambah</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambah-referensi" style="float: right;" >Tambah</button>
+                <form action="/dosen/tambahreferensi" method="post">
                 <!-- Modal Content -->
-                <div class="modal fade" id="referensi" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                <div class="modal fade" id="tambah-referensi" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="h6 modal-title">Tambah Referensi</h2>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <form action="" method="post">
                             <div class="modal-body">
+                                <input type="hidden" name="course_plan_id" value="<%= rps.id %>">
                                 <label>Judul </label>
                                 <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Masukkan Judul" name="kodeMatkul" required>
+                                <input type="text" class="form-control" placeholder="Masukkan Judul" name="title" required>
                                 </div>
                                 <label>Pengarang </label>
                                 <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Masukkan Nama Pengarang" name="kodeMatkul" required>
+                                <input type="text" class="form-control" placeholder="Masukkan Nama Pengarang" name="author" required>
                                 </div>
                                 <label>Penerbit </label>
                                 <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Masukkan Nama Penerbit" name="kodeMatkul" required>
+                                <input type="text" class="form-control" placeholder="Masukkan Nama Penerbit" name="publisher" required>
                                 </div>
                                 <label>Tahun </label>
                                 <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Masukkan Tahun diterbitkan" name="kodeMatkul" required>
+                                <input type="number" class="form-control" placeholder="Masukkan Tahun diterbitkan" name="year" required>
                                 </div>
                                 <label>Kategori</label>
                                 <div class="input-group mb-3">
-                                <select class="form-select" name="" id="">
-                                    <option value="">Utama</option>
-                                    <option value="">Pendukung</option>
+                                <select class="form-select" name="description" id="">
+                                    <option value="Utama">Utama</option>
+                                    <option value="Pendukung">Pendukung</option>
                                 </select>
                                 </div>
                             </div>
@@ -93,168 +78,105 @@
                     
                 </div>
             </div><br>
-                    <label for="table-responsive">Utama</label>
+                    <label for="table-responsive">Tabel Referensi</label>
                     <div class="table-responsive" name="table-responsive">
                         <table class="table table-centered table-nowrap mb-0 rounded">
                             <thead class="thead-light">
                                 <tr>
+                                    <th hidden>No</th>
                                     <th class="border-0 rounded-start">Judul</th>
                                     <th class="border-0">Pengarang</th>
                                     <th class="border-0">Penerbit</th>
                                     <th class="border-0">Tahun</th>
+                                    <th class="border-0">Kategori</th>
                                     <th class="border-0 rounded-end">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <% referensi.forEach((ref, index) => { %>
                                 <tr>
-                                    <td class="border-0"> Beginning PHP 5.3 </td>
-                                    <td class="border-0 font-weight-bold">Matt Doyle</td>
-                                    <td class="border-0 font-weight-bold">Wrox</td>
-                                    <td class="border-0 font-weight-bold">2009</td>
+                                    <td hidden><%=index+1%></td>
+                                    <td class="border-0"><%= ref.title %>  </td>
+                                    <td class="border-0 font-weight-bold"><%= ref.author %></td>
+                                    <td class="border-0 font-weight-bold"><%= ref.publisher %></td>
+                                    <td class="border-0 font-weight-bold"><%= ref.year %></td>
+                                    <td class="border-0 font-weight-bold"><%= ref.description %></td>
+                                    
                                     <td class="border-0 font-weight-bold">
-                                        <button type="button" class="btn btn-secondary box" data-bs-toggle="modal" data-bs-target="#modal-form">Edit</button>
-                                        <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#edit<%=index+1%>">Edit</button>
+                                        <!-- Modal Content -->
+                                        <div class="modal fade" id="edit<%=index+1%>" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
-                                                    <div class="modal-body p-0">
-                                                        <div class="card p-3 p-lg-4">
-                                                            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
-                                                                aria-label="Close"></button>
-                                                            <div class="text-center text-md-center mb-4 mt-md-0">
-                                                                <h1 class="mb-0 h4">Edit</h1>
-                                                            </div>
-                                                            <form action="#" class="mt-4">
-                                                                <!-- Form -->
-                                                                <div class="form-group mb-4">
-                                                                    <label for="email"><h5>Referensi</h5></label>
-                                                                    <div class="form-group">
-                                                                        <div class="mb-3">
-                                                                            <label for="exampleFormControlInput1" class="form-label">Judul</label>
-                                                                            <input type="email" class="form-control" id="exampleFormControlInput1">
-                                                                        </div>
-                                                                            <label for="exampleFormControlInput1" class="form-label">Pengarang</label>
-                                                                            <input type="email" class="form-control" id="exampleFormControlInput1">
-                                                                        </div>
-                                                                        <div class="mb-3"></div>
-                                                                            <label for="exampleFormControlInput1" class="form-label">Penerbit</label>
-                                                                            <input type="email" class="form-control" id="exampleFormControlInput1">
-                                                                        </div>
-                                                                            <label for="exampleFormControlInput1" class="form-label">Tahun</label>
-                                                                            <input type="email" class="form-control" id="exampleFormControlInput1">
-                                                                    <div class="d-grid">
-                                                                        <div class="mb-3"></div>
-                                                                        <button type="submit" class="btn btn-gray-800">Selesai</button>
-                                                                    </div>
-                                                                </div>
-                                                        </div>
-                            
-                                                        </form>
+                                                    <div class="modal-header">
+                                                        <h2 class="h6 modal-title">Edit Referensi</h2>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
+                                                    <form action="/dosen/editreferensi" method="post">
+                                                    <div class="modal-body">
+                                                        <input type="hidden" name="id" value="<%= ref.id %>">
+                                                        <label>Judul </label>
+                                                        <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="<%= ref.title %>" name="title" required>
+                                                        </div>
+                                                        <label>Pengarang </label>
+                                                        <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="<%= ref.author %>" name="author" required>
+                                                        </div>
+                                                        <label>Penerbit </label>
+                                                        <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="<%= ref.publisher %>" name="publisher" required>
+                                                        </div>
+                                                        <label>Tahun </label>
+                                                        <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="<%= ref.year %>" name="year" required>
+                                                        </div>
+                                                        <label>Kategori</label>
+                                                        <div class="input-group mb-3">
+                                                        <select class="form-select" name="description">
+                                                            <option value="Utama">Utama</option>
+                                                            <option value="Pendukung">Pendukung</option>
+                                                        </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-primary">Edit</button>
+                                                        <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
+                                                    </div>
+                                                </form>
                                                 </div>
-                                            </div>
+                                            
                                         </div>
-                                        </li>
-                                            <button type="button" class="btn btn-danger box" data-bs-toggle="modal" data-bs-target="#modal-default">Hapus</button>
-                                                        <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                                    </div>
+                                            <button type="button" class="btn btn-danger box" data-bs-toggle="modal" data-bs-target="#hapus<%=index+1%>">Hapus</button>
+                                                        <div class="modal fade" id="hapus<%=index+1%>" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h2 class="h6 modal-title">Peringatan!</h2>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                     </div>
-                                                                    <div class="modal-body">
-                                                                        <p>Apakah Anda Yakin ingin Menghapus?</p>
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="submit" class="btn btn-danger box" data-bs-dismiss="modal">Hapus</button>
-                                                                        <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
-                                                                    </div>
+                                                                    <form action="/dosen/hapusreferensi" method="post">
+                                                                        <div class="modal-body">
+                                                                            <p>Apakah Anda Yakin ingin Menghapus?</p>
+                                                                            <input type="hidden" name="id" value="<%=ref.id%>">
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                                                            <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Batal</button>
+                                                                        </div>
+                                                                    </form>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     
                                     </td>
                                 </tr>
+                                <% })%>
                             </tbody>
                         </table>
                     </div>
                     </div>
-                    <div class="card-body">
-                        <label for="table-responsive">Pendukung</label>
-                        <div class="table-responsive" name="table-responsive">
-                            <table class="table table-centered table-nowrap mb-0 rounded">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th class="border-0 rounded-start">Judul</th>
-                                        <th class="border-0">Pengarang</th>
-                                        <th class="border-0">Penerbit</th>
-                                        <th class="border-0">Tahun</th>
-                                        <th class="border-0 rounded-end">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Item -->
-                                    <tr>
-                                        <td class="border-0"> Beginning PHP 5.3 </td>
-                                        <td class="border-0 font-weight-bold">Matt Doyle</td>
-                                        <td class="border-0 font-weight-bold">Wrox</td>
-                                        <td class="border-0 font-weight-bold">2009</td>
-                                        <td class="border-0 font-weight-bold">
-                                            <button type="button" class="btn btn-secondary box" data-bs-toggle="modal" data-bs-target="#modal-form">Edit</button>
-                                            <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-body p-0">
-                                                            <div class="card p-3 p-lg-4">
-                                                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
-                                                                    aria-label="Close"></button>
-                                                                <div class="text-center text-md-center mb-4 mt-md-0">
-                                                                    <h1 class="mb-0 h4">Edit</h1>
-                                                                </div>
-                                                                <form action="#" class="mt-4">
-                                                                    <!-- Form -->
-                                                                    <div class="form-group mb-4">
-                                                                        <label for="email">Referensi</label>
-                                                                        <div class="form-group">
-                                                                           <textarea class="form-group" name="" id="" cols="30" rows="8"></textarea>
-                                                                        </div> <br>
-                                                                        <div class="d-grid">
-                                                                            <button type="submit" class="btn btn-gray-800">Selesai</button>
-                                                                        </div>
-                                                                    </div>
-                                                            </div>
-                                
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </li>
-                                                <button type="button" class="btn btn-danger box" data-bs-toggle="modal" data-bs-target="#modal-default">Hapus</button>
-                                                            <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-                                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <h2 class="h6 modal-title">Peringatan!</h2>
-                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <p>Apakah Anda Yakin ingin Menghapus?</p>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="submit" class="btn btn-danger box" data-bs-dismiss="modal">Hapus</button>
-                                                                            <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        </div>
                         
 
 <%- include('layout/foot') %>

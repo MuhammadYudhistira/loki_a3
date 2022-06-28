@@ -16,10 +16,10 @@
                 <a href="/dosen">RPS Mata kuliah</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/dosen/detail">Detail Mata kuliah</a>
+                <a href="/dosen/detail-<%=rps.id %>">Detail Mata kuliah</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/dosen/revisi">Revisi</a>
+                <a href="/dosen/detail-<%=rps.id %>/revisi">Revisi</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Komponen Penilaian</li>
         </ol>
@@ -32,114 +32,116 @@
                         <h4 class="card-title">Pemograman Web</h4>
                     </div>
                     <div class="card-body">
-                        
-                        <ul>
-                        <li>Kode Mata Kuliah : JSI62129</li>
-                        <li>Semester : 4</li>
-                        <li>SKS : 3</li>
-                        <li>Kurikulum : 2021</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </section>
-        </div>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-
-</style>
-
-<table>
-  <tr>
-    <th>Komponen Penilaian</th>
-    <th>Bobot</th>
-    <th>Aksi</th>
-  </tr>
-  <tr>
-    <td>Kehadiran</td>
-    <td>10%</td>
-    <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
-        <td><div class="nav-wrapper position-relative">
-          <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
-              <li class="nav-item">
-                   <!-- Button Modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form">
-                
-                Edit</button>
-            <!-- Modal Content -->
-            <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-top" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body p-0">
-                            <div class="card p-3 p-lg-4">
-                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                                <div class="text-center text-md-center mb-4 mt-md-0">
-                                    <h1 class="mb-0 h4">Edit Komponen Penilaian</h1>
-                                </div>
-                                <form action="#" class="mt-4">
-                                    <!-- Form -->
-                                    <div class="form-group mb-4">
-                                        
-                                        <div class="form-group">
-                                            <div class="mb-3">
-                                                <label for="exampleFormControlInput1" class="form-label">Komponen Penilaian</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1">
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <div class="mb-3">
-                                                <label for="exampleFormControlInput1" class="form-label">Bobot</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1">
-                                        </div>
-                                         <br>
-                                        <div class="d-grid">
-                                            <button type="submit" class="btn btn-gray-800">Selesai</button>
-                                        </div>
-                                    </div>
+                    <!-- Button Modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambah-penilaian" style="float: right;" >Tambah</button>
+                <!-- Modal Content -->
+                <div class="modal fade" id="tambah-penilaian" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <form action="/dosen/tambahpenilaian" method="post">
+                            <div class="modal-header">
+                                <h2 class="h6 modal-title">Tambah Komponen Penilaian</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-
-                            </form>
+                            <div class="modal-body">
+                                <input type="hidden" name="course_plan_id" value="<%= rps.id %>">
+                                <input type="hidden" name="flag" value="1">
+                                <label>Komponen Penilaian </label>
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Komponen penilaian" name="name" required>
+                                </div>
+                                <label>Bobot </label>
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="persentase" name="percentage" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Tambah</button>
+                                <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </form>
                         </div>
                     </div>
-                </div>
-            </div>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-default">Hapus</button>
-                            <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h2 class="h6 modal-title">Peringatan!</h2>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Apakah Anda Yakin ingin Menghapus?</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
-                                            <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
+                </div><br>
+                <label for="table-responsive">Tabel Referensi</label>
+                    <div class="table-responsive" name="table-responsive">
+                        <table class="table table-centered table-nowrap mb-0 rounded">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th hidden>No</th>
+                                    <th class="border-0 rounded-start">Komponen Penilaian</th>
+                                    <th class="border-0">Bobot</th>
+                                    <th class="border-0 rounded-end">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% penilaian.forEach((nilai, index) => { %>
+                                <tr>
+                                    <td hidden><%=index+1%></td>
+                                    <td class="border-0"><%=nilai.name%></td>
+                                    <td class="border-0 font-weight-bold"><%=nilai.percentage%>%</td>
+                                    <td class="border-0 font-weight-bold">
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#edit<%=index+1%>">Edit</button>
+                                        <!-- Modal Content -->
+                                        <div class="modal fade" id="edit<%=index+1%>" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h2 class="h6 modal-title">Edit Referensi</h2>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <form action="/dosen/editpenilaian" method="post">
+                                                    <div class="modal-body">
+                                                        <input type="hidden" name="id" value="<%= nilai.id %>">
+                                                        <input type="hidden" name="flag" value="<%= nilai.flag %>">
+                                                        <label>Komponen Penilaian </label>
+                                                        <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="<%= nilai.name %>" name="name" required>
+                                                        </div>
+                                                        <label>Bobot </label>
+                                                        <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="<%= nilai.percentage %>" name="percentage" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-primary">Edit</button>
+                                                        <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
+                                                    </div>
+                                                </form>
+                                                </div>
+                                            
                                         </div>
                                     </div>
+                                            <button type="button" class="btn btn-danger box" data-bs-toggle="modal" data-bs-target="#hapus<%=index+1%>">Hapus</button>
+                                                        <div class="modal fade" id="hapus<%=index+1%>" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h2 class="h6 modal-title">Peringatan!</h2>
+                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                    </div>
+                                                                    <form action="/dosen/hapuspenilaian" method="post">
+                                                                        <div class="modal-body">
+                                                                            <p>Apakah Anda Yakin ingin Menghapus?</p>
+                                                                            <input type="hidden" name="id" value="<%=nilai.id%>">
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                                                            <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Batal</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                    </td>
+                                </tr>
                                 </div>
                             </div>
-            </li></button></td>
-
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </section>
 <%- include('layout/foot') %>
