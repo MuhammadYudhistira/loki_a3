@@ -1,4 +1,4 @@
-<%- include('layout/head', {judul: 'Daftar RPS'}) %>
+<%- include('layout/head', {judul: 'List Matakuliah Dosen'}) %>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
             <div class="d-block mb-4 mb-md-0">
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
@@ -13,23 +13,11 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">RPS Matakuliah</li>
+                        <li class="breadcrumb-item active" aria-current="page">List Mata kuliah</li>
                     </ol>
                 </nav>
-                <h2 class="h2">Daftar RPS Matakuliah</h2>
+                <h2 class="h2">List Mata Kuliah</h2>
             </div>
-            <div class="btn-toolbar mb-2 mb-md-0">
-                <!-- Button Modal -->
-                <a href="/dosen/tambah" type="button" class="btn btn-primary">
-                    <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                    </svg>
-                    Tambah</a>
-                
-                    
-                </div>
             </div>
         </div>
     
@@ -41,7 +29,7 @@
                 <table class="table datatable">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
+                      <th hidden>No</th>
                       <th scope="col">Kode Matakuliah</th>
                       <th scope="col">Nama Mata Kuliah</th>
                       <th scope="col">Jumlah SKS</th>
@@ -49,16 +37,18 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <% matkul.forEach((matakuliah,index) => { %>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>JSI62125</td>
-                      <td>Pemograman Web</td>
-                      <td>3</td>
+                      <td hidden><%= index+1 %></td>
+                      <td><%= matakuliah.code %></td>
+                      <td><%= matakuliah.name %></td>
+                      <td><%= matakuliah.credit %></td>
                       <td>
-                        <a class="btn btn-secondary" type="button" href="/dosen/detail">Detail</a>
+                        <a href="/dosen/tambah" type="button" class="btn btn-primary">Tambah</a>
+                        <a class="btn btn-secondary" type="button" href="/dosen/detail-<%=matakuliah.id%>">Detail</a>
                       </td>
                     </tr>
-                  
+                    <% }) %>
                   </tbody>
                 </table>
   

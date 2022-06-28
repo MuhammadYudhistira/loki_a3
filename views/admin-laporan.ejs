@@ -25,31 +25,61 @@
             <section class="section">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"><%=matkul.name %></h4>
+                        <h4 class="card-title">PWEB</h4>
                     </div>
                     <div class="card-body">
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col bg-soft">
-                                <p>Kode : <%=matkul.code%></p>
+                                <p>Kode : asd
                             </div>
                             <div class="col bg-soft">
-                                <p>Jumlah Revisi : <%=matkul.ref%></p>
+                                <p>Jumlah Revisi : asd
                             </div>
                             <div class="w-100"></div>
                             <div class="col bg-soft">
-                                <p>SKS : <%=matkul.credit%></p></div>
+                                <p>SKS : asd</p></div>
                             <div class="col bg-soft">
-                                <p>Semester : <%=matkul.semester%></p>
+                                <p>Semester : asd</p>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                     </div> <br>
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Peta CPL ke CPMK</h4>
+                        <h4 class="card-title">Tabel Laporan RPS</h4>
                     </div>
                     <div class="card-body">
-                        </div>
+                        <div class="card-body">
+                            <!-- <label for="table-responsive">Pendukung</label> -->
+                            <div class="table-responsive" name="table-responsive">
+                                <table class="table table-centered table-nowrap mb-0 rounded">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th class="border-0 rounded-start">No</th>
+                                            <th class="border-0">Kode Mata Kuliah</th>
+                                            <th class="border-0">Nama Mata Kuliah</th>
+                                            <th class="border-0">SKS</th>
+                                            <th class="border-0 rounded-end">Jumlah Revisi</th>
+                                            <th class="border-0 rounded-end">Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Item -->
+                                        <tr>
+                                            <td class="border-0"> Beginning PHP 5.3 </td>
+                                            <td class="border-0 font-weight-bold">Matt Doyle</td>
+                                            <td class="border-0 font-weight-bold">Wrox</td>
+                                            <td class="border-0 font-weight-bold">2009</td>
+                                            <td class="border-0 font-weight-bold">1</td>
+                                            <td class="border-0 font-weight-bold">
+                                                <a class="btn btn-secondary" type="button" href="#">Peta CPL ke CPMK</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                </div>
                 </div><br>
 
                 <div class="card">
@@ -61,4 +91,4 @@
                 </div>
 
             </section>
-<%- include('layout/foot') %>
+<%- include('layout/foot-datatable') %>

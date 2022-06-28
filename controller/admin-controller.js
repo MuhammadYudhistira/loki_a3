@@ -10,7 +10,7 @@ controller.listMatakuliah = async (req, res) => {
     res.render('admin-listmatkul', {kurikulum, matkul});
 }
 
-controller.tambahMatkul = async function(req, res){
+controller.tambahMatkul = async (req, res) => {
 
     const { kurikulum,  kodeMatkul, nama, alias, SKS, semester, deskripsi } = req.body;
 
@@ -112,9 +112,9 @@ controller.dashboard = async (req, res) => {
 }
 
 controller.laporan = async (req, res) => {
-    const id = req.params.id
-    const matkul = await model.courses.findOne({ where: { id: id }})
-    res.render('admin-laporan', {matkul});
+    // const id = req.params.id
+    // const matkul = await model.courses.findOne({ where: { id: id }})
+    res.render('admin-laporan');
 }
 
 module.exports = controller;

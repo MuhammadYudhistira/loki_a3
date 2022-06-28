@@ -48,6 +48,51 @@
                         </ul>
                     </div>
                 <div class="card-body">
+                    <!-- Button Modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#referensi" style="float: right;" >Tambah</button>
+                <!-- Modal Content -->
+                <div class="modal fade" id="referensi" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="h6 modal-title">Tambah Referensi</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <form action="" method="post">
+                            <div class="modal-body">
+                                <label>Judul </label>
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Masukkan Judul" name="kodeMatkul" required>
+                                </div>
+                                <label>Pengarang </label>
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Masukkan Nama Pengarang" name="kodeMatkul" required>
+                                </div>
+                                <label>Penerbit </label>
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Masukkan Nama Penerbit" name="kodeMatkul" required>
+                                </div>
+                                <label>Tahun </label>
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Masukkan Tahun diterbitkan" name="kodeMatkul" required>
+                                </div>
+                                <label>Kategori</label>
+                                <div class="input-group mb-3">
+                                <select class="form-select" name="" id="">
+                                    <option value="">Utama</option>
+                                    <option value="">Pendukung</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Tambah</button>
+                                <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </form>
+                        </div>
+                    
+                </div>
+            </div><br>
                     <label for="table-responsive">Utama</label>
                     <div class="table-responsive" name="table-responsive">
                         <table class="table table-centered table-nowrap mb-0 rounded">
@@ -61,7 +106,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Item -->
                                 <tr>
                                     <td class="border-0"> Beginning PHP 5.3 </td>
                                     <td class="border-0 font-weight-bold">Matt Doyle</td>
@@ -211,5 +255,6 @@
                             </table>
                         </div>
                         </div>
+                        
 
 <%- include('layout/foot') %>

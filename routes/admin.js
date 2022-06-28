@@ -7,7 +7,7 @@ router.use( express.static( "public" ) );
 
 router.get("/", controller.admin.dashboard)
 router.get("/matakuliah", controller.admin.listMatakuliah)
-router.get("/lihat-laporan-:id", controller.admin.laporan)
+router.get("/lihat-laporan", controller.admin.laporan)
 router.get("/dosen-:id", controller.admin.MenentukanDosen)
 
 router.post("/tambahmatkul", controller.admin.tambahMatkul)

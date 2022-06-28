@@ -55,17 +55,100 @@ tr:nth-child(even) {
 
 <section class="section">
     <div>
-        <a href="/dosen/edit" class="btn btn-secondary box"  type="button" style="float:right;"> Edit</a>
-        <a href="/dosen/revisi" class="btn btn-secondary box" type="button" style="float:right;"> Revisi</a>
+        
         <a href="#" class="btn btn-secondary box" type="button" onclick="window.print()"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"><path d="M13.25 6.708V4.25H6.75V6.708H5V2.5H15V6.708ZM3.417 8.458Q3.417 8.458 3.677 8.458Q3.938 8.458 4.312 8.458H15.771Q16.146 8.458 16.365 8.458Q16.583 8.458 16.583 8.458H14.833H5.167ZM15 10.646Q15.354 10.646 15.615 10.385Q15.875 10.125 15.875 9.771Q15.875 9.417 15.615 9.156Q15.354 8.896 15 8.896Q14.646 8.896 14.385 9.156Q14.125 9.417 14.125 9.771Q14.125 10.125 14.385 10.385Q14.646 10.646 15 10.646ZM13.25 15.75V12.833H6.75V15.75ZM15 17.5H5V14.438H1.667V9.271Q1.667 8.208 2.417 7.458Q3.167 6.708 4.229 6.708H15.771Q16.833 6.708 17.583 7.458Q18.333 8.208 18.333 9.271V14.438H15ZM16.583 12.688V9.354Q16.583 8.979 16.365 8.719Q16.146 8.458 15.771 8.458H4.312Q3.938 8.458 3.677 8.719Q3.417 8.979 3.417 9.354V12.688H5V11.083H15V12.688Z"/></svg> Print</a>
-
         <a href="#" class="btn btn-secondary box" type="button"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"><path d="M5.5 17Q4.875 17 4.438 16.562Q4 16.125 4 15.5V14H5.5V15.5Q5.5 15.5 5.5 15.5Q5.5 15.5 5.5 15.5H14.5Q14.5 15.5 14.5 15.5Q14.5 15.5 14.5 15.5V14H16V15.5Q16 16.125 15.562 16.562Q15.125 17 14.5 17ZM10 14 6 10 7.062 8.938 9.25 11.125V4H10.75V11.125L12.938 8.938L14 10Z"/></svg> Unduh</a>
 
     </div><br>
-                <div class="card"> <!---->
-                    <div class="card-header"> <!---->
-                        
-                    <div class="card-body"> <!---->
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">Detail Matakuliah</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <p>To make label in center of form-control, use <code>.col-form-label</code> class with
+                        <code>&lt;label&gt;</code> element. This is default bootstrap class.
+                    </p> -->
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row align-items-center">
+                        <div class="col-lg-4 col-3">
+                            <label class="col-form-label"><h6>Kode Mata kuliah</h6></label>
+                        </div>
+                        <div class="col-lg-5 col-9">
+                            <p class="form-control-static" id="staticInput"><%= rps.code %></p>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center">
+                        <div class="col-lg-4 col-3">
+                            <label class="col-form-label"><h6>Nama Mata kuliah</h6></label>
+                        </div>
+                        <div class="col-lg-5 col-9">
+                            <p class="form-control-static" id="staticInput"><%= rps.name %></p>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center">
+                        <div class="col-lg-4 col-3">
+                            <label class="col-form-label"><h6>Semester</h6></label>
+                        </div>
+                        <div class="col-lg-5 col-9">
+                            <p class="form-control-static" id="staticInput"><%= rps.semester %></p>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center">
+                        <div class="col-lg-4 col-3">
+                            <label class="col-form-label"><h6>SKS</h6></label>
+                        </div>
+                        <div class="col-lg-5 col-9">
+                            <p class="form-control-static" id="staticInput"><%= rps.credit %></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <br><br><br>                                
+            </div>
+        </div>
+        <div class="card-footer">
+            <!-- Button Modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-form"> Tambah</button>
+            <!-- Modal Content -->
+            <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="h6 modal-title">Tambah Dosen</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="/admin/tambahdosen" method="post">
+                        <div class="modal-body">
+                            <label class="my-1 me-2">Nama Dosen</label>
+                            <div class="form-group"> 
+                                <input type="hidden" name="idrps" value="<%= rps.id %>">
+                                <select class="form-select" name="iddosen">
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Tambah</button>
+                            <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
+                        </div>
+                    </form>
+                    </div>
+                
+            </div>
+        </div>
+            <a href="/dosen/edit" class="btn btn-secondary box"  type="button" > Edit</a>
+            <a href="/dosen/detail-<%=rps.id %>/revisi" class="btn btn-secondary box" type="button" > Revisi</a>
+                
+        </div>
+    </div><br>
+                <div class="card">
+                    <div class="card-header"> 
+                        <h2 class="card-title">Detail RPS</h2>
+                    </div>
+                    <div class="card-body">
                         
                         <div class="col-md-6">
                             <div class="form-group row align-items-center">
@@ -95,12 +178,12 @@ tr:nth-child(even) {
                                 </tr>
 
                                 <tr>  <!--pembuatan baris-->
-                                    <th colspan="2" style="text-align: left;" >Pemograman Web</th> <!--pembuatan kolom-->
+                                    <th colspan="2" style="text-align: left;" ><%=rps.name%></th> <!--pembuatan kolom-->
+                                    <th><%= rps.code %></th>
                                     <td></td>
-                                    <td></td>
-                                    <th>3</th>
-                                    <th>4</th>
-                                    <th>2021</th>
+                                    <th><%= rps.credit %></th>
+                                    <th><%= rps.semester %></th>
+                                    <th></th>
                                 </tr>
 
                                 <tr> <!--pembuatan baris-->
@@ -186,7 +269,7 @@ tr:nth-child(even) {
                                 <tr> <!--pembuatan baris-->
                                    <th style="background-color: #fcfcfc; text-align: left;" colspan="2">Deskripsi Singkat <br>
                                     Mata Kuliah</th>
-                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6">Mata kuliah pemrograman web merupakan mata kuliah yang membahas tentang teknik pengembangan website dari hulu ke hilir, yaitu mulai dari algoritma dalam pemrograman web, pembuatan website (front-end dan back-end), hosting hingga dokumentasi dan hukum kekayaan intelektual dari program yang dihasilkan nantinya.</td>
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6"><%= rps.description%></td>
                                    <tr></tr>
 
                                 </tr>
@@ -281,6 +364,7 @@ tr:nth-child(even) {
                         </table>
                     </div>
                 <div class="card-body"></div>
+            
             </div>
 
 </section>

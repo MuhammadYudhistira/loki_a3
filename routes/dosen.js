@@ -7,10 +7,10 @@ router.set('view engine', 'ejs');
 router.use( express.static( "public" ) );
 
 router.get('/', controller.dosen.listmatkul)
+router.get('/detail-:id', controller.dosen.detailmatkul)
+router.get('/detail-:id/revisi', controller.dosen.revisirps)
 
-router.get('/revisi', (req,res) => {
-    res.render('dosenrevisi')
-})
+
 router.get('/cpmk', (req,res) => {
     res.render('dosencpmk')
 })
@@ -23,9 +23,7 @@ router.get('/penilaian', (req,res) => {
 router.get('/mingguan', (req,res) => {
     res.render('dosenmingguan')
 })
-router.get('/detail', (req,res) => {
-    res.render('dosendetail')
-})
+
 router.get('/CPMK', (req,res) => {
     res.render('dosenCPMK')
 })
