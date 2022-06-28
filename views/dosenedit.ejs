@@ -17,97 +17,57 @@
                         <a href="/dosen"> RPS Mata Kuliah
                         </a>
                     </li>
-                      <li class="breadcrumb-item active" aria-current="page">Tambah RPS Mata kuliah</li>
+                      <li class="breadcrumb-item active" aria-current="page">Edit RPS Mata kuliah</li>
                   </ol>
               </nav>
           </div>
       </div>
-        <div id="main">
-          <h2 class="h2">Edit RPS Mata kuliah</h2>
-          <section class="section">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Identitas Mata Kuliah</h4>
-                </div>
-                <div class="card-body">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nama Mata Kuliah</label>
-            <input type="kode" class="form-control"  id="exampleFormControlInput1">
-        </div>
+      <div id="main">
+        <h2 class="h2">RPS Mata kuliah</h2>
+        <section class="section">
+          <div class="card">
+              <div class="card-header">
+                  <h4 class="card-title">Edit RPS</h4>
+              </div>
+              <div class="card-body">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Kode</label>
-            <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Rumpun/Kelompok MK</label>
-          <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        <div class="mb-3">
-          <label class="my-1 me-2" for="sks">Bobot (sks)</label>
-          <select class="form-select" id="sks" aria-label="Default select example">
-          <option selected>sks</option>
-          <option value="1">2</option>
-          <option value="2">3</option>
-          <option value="3">4</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label class="my-1 me-2" for="country">Semester</label>
-          <select class="form-select" id="country" aria-label="Default select example">
-          <option selected>Semester</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="3">4</option>
-          <option value="3">5</option>
-          <option value="3">6</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Tgl Penyusunan</label>
-          <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        
-      
-          
-        <P><div class="card-header"></P>
-          <h4 class="card-title">Otorisasi</h4>
-        </div>
-        <div class="card-body">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Dosen Pengembang RPS</label>
-            <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
-         </div>
-            <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Koordinator Rumpun MK</label>
-            <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
-           </div>
-           <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Ka Program Studi</label>
-          <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
-          </div>
-
-          <P><div class="card-header"></P>
-            <h4 class="card-title">Capaian Pembelajaran (CP)</h4>
-          </div>
-          <div class="card-body">
-          </div>
-        <div class="mb-3">
-          <h5></h5>
-          <label for="exampleFormControlInput1" class="form-label">Dosen Pengembang RPS</label>
-          <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Koordinator Rumpun MK</label>
+          <label for="exampleFormControlInput1" class="form-label">Kode Mata Kuliah</label>
+          <input type="kode" class="form-control"  id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nama Mata Kuliah</label>
           <input type="kode" class="form-control" id="exampleFormControlInput1" placeholder="">
-         </div>
+      </div>
+       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Semester</label>
+        <select class="form-select" id="country" aria-label="Default select example">
+        <option selected>Semester</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="3">4</option>
+        <option value="3">5</option>
+        <option value="3">6</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Material</label>
+        <input type="smstr" class="form-control" id="exampleFormControlInput1" placeholder="">
+      </div>
+      <div class="mb-3">
         <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Ka Program Studi</label>
-        <input type="rumpun" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        </section>
-          </div>
+          <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal"></button>
+    </div>
+</form>
+</div>
+
+      <%- include('layout/foot-datatable') %>
 
 
-        <%- include('layout/foot-datatable') %>
+
