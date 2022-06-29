@@ -2,7 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require("./dbconfig");
 const course_plans = require("./course_plans");
 
-const course_plans_details = sequelize.define('course_plans_details' ,
+const course_plan_details = sequelize.define('course_plan_details' ,
 {
     id:
     {
@@ -59,11 +59,11 @@ const course_plans_details = sequelize.define('course_plans_details' ,
     }, 
     
     {
-    tableName: 'course_plans_details',
+    tableName: 'course_plan_details',
     timestamps: true,
     updatedAt: 'updated_at',
     createdAt: 'created_at'
 
 });
 
-module.exports = course_plans_details;
+module.exports = course_plan_details;

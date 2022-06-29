@@ -16,334 +16,168 @@
                 <a href="/dosen">RPS Mata kuliah</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/dosen/detail">Detail Mata kuliah</a>
+                <a href="/dosen/detail-<%=rps.id %>">Detail Mata kuliah</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/dosen/revisi">Revisi</a>
+                <a href="/dosen/detail-<%=rps.id %>/revisi">Revisi</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Pertemuan Mingguan</li>
         </ol>
     </nav>
-    <h2 class="h2">Pertemuan Mingguan</h2>
-</div>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+    <h2 class="h2">Pertemuan Mingguan Matakuliah</h2>
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-.box{
-   margin-bottom:10px; 
-}
-
-</style>
-</head>
-<body>
-
-<table>
-  <tr>
-    <th>Mg ke-</th>
-    <th>Kemampuan akhir yg diharapkan</th>
-    <th>Bahan Kajian (Materi Ajar) Dan Referensi</th>
-    <th>Metode Pembelajaran dan Alokasi Waktu</th>
-    <th>Pengalaman Belajar Mahasiswa</th>
-    <th>Kriteria (Indikator) Penilaian</th>
-    <th>Bobot Penilan (%)</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web</td>
-    <td><p>1. Pengenalan WEB:</p>
-            <p>a. Web dan Hypertext Document</p>
-            <p>b. Protokol HTTP (method dan status message)</p>
-            <p>c. <i>Client side (front-end)</i></p>
-            <p>d. <i>Server side (back-end)</i></p>
-            <p>e. Interaksi <i>client side</i> dengan <i>server side</i></p>
-    </td>
-    <td>Presentasi Dosen dan diskusi (3 x 50 mnt)</td>
-    <td>Mahasiswa memberikan tanggapan tentang konsep dasar dan komponen aplikasi berbasis web</td>
-    <td>Keaktifan dan partisipasi dalam diskusi dan menjawab pertanyaan</td>
-    <td></td>
-    <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
-      <td><div class="nav-wrapper position-relative">
-        <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
-            <li class="nav-item">
-                <!-- Button Modal -->
-            <div class="box">
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form">
-               
-              Edit</button>
-            </div>
-              
-          <!-- Modal Content -->
-          <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-top" role="document">
-                  <div class="modal-content">
-                      <div class="modal-body p-0">
-                          <div class="card p-3 p-lg-4">
-                              <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
-                                  aria-label="Close"></button>
-                              <div class="text-center text-md-center mb-4 mt-md-0">
-                                  <h1 class="mb-0 h4">Edit Pertemuan Mingguan</h1>
-                              </div>
-                              <form action="#" class="mt-4">
-                                  <!-- Form -->
-                                  <div class="form-group mb-4">
-                                      <label for="email">Minggu Ke-</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Kemampuan yang Diharapkan</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Bahan Kajian & Referensi</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Metode Pembelajaran & Alokasi Waktu</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Pengalaman Belajar Mahasiswa</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Kriteria Penilaian</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Bobot</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                       <br>
-                                      <div class="d-grid">
-                                          <button type="submit" class="btn btn-gray-800">Selesai</button>
-                                      </div>
-                                  </div>
-                          </div>
-
-                          </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          </li>
-          <li class="nav-item">
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-default">Hapus</button>
-                          <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h2 class="h6 modal-title">Peringatan!</h2>
-                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                      </div>
-                                      <div class="modal-body">
-                                          <p>Apakah Anda Yakin ingin Menghapus?</p>
-                                      </div>
-                                      <div class="modal-footer">
-                                          <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
-                                          <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-          </li></button></td>
-</tr>
-<tr>
-    <table>
-        <tr>
-          <th>Mg ke-</th>
-          <th>Kemampuan akhir yg diharapkan</th>
-          <th>Bahan Kajian (Materi Ajar) Dan Referensi</th>
-          <th>Metode Pembelajaran dan Alokasi Waktu</th>
-          <th>Pengalaman Belajar Mahasiswa</th>
-          <th>Kriteria (Indikator) Penilaian</th>
-          <th>Bobot Penilan (%)</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Mahasiswa mampu menggunakan salah satu technology stack untuk membangun aplikasi berbasis web</td>
-          <td>Pemograman Javascript Dasar (Input/Output, control program, function, class dan object)</td>
-          <td>Presentasi Dosen dan diskusi (3 x 50 mnt)</td>
-          <td><p>Mahasiswa menyelesaikan latihan yang diberikan</p>
-            <p>Mahasiswa membahas project yang akan dikerjakan</p></td>
-          <td>Kemampuan menyelesaikan latihan</td>
-          <td></td>
-          <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
-            <td><div class="nav-wrapper position-relative">
-              <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
-                  <li class="nav-item">
-                      <!-- Button Modal -->
-                      <div class="box">
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form"> Edit</button>
+            <section class="section">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"><%=rps.name %></h4>
+                    </div>
+                <div class="card-body">
+                    <!-- Button Modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambah-mingguan" style="float: right;" >Tambah</button>
+                <form action="/dosen/tambahmingguan" method="post">
+                <!-- Modal Content -->
+                <div class="modal fade" id="tambah-mingguan" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="h6 modal-title">Tambah Mingguan</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" name="course_plan_id" value="<%= rps.id %>">
+                                <label>Minggu Ke- </label>
+                                <div class="input-group mb-3">
+                                <select class="form-select" name="week">
+                                <% for (var i = 1; i <=16;i++){%> 
+                                <option value="<%=i%>"><%=i%></option>
+                                <%}%>
+                                </select>
+                                </div>
+                                
+                                <label>Materi </label>
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="" name="material" required>
+                                </div>
+                                <label>Metode Pembelajaran </label>
+                                <div class="input-group mb-3">
+                                    <select class="form-select" name="method">
+                                        <option value="Project Based">Project Based</option>
+                                        <option value="Cased Based">Cased Based</option>
+                                        </select>
+                                </div>
+                                <label>Pengalaman Belajar </label>
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="" name="student_experience" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Tambah</button>
+                                <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </form>
                         </div>
-          <!-- Modal Content -->
-          <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-top" role="document">
-                  <div class="modal-content">
-                      <div class="modal-body p-0">
-                          <div class="card p-3 p-lg-4">
-                              <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
-                                  aria-label="Close"></button>
-                              <div class="text-center text-md-center mb-4 mt-md-0">
-                                  <h1 class="mb-0 h4">Edit</h1>
-                              </div>
-                              <form action="#" class="mt-4">
-                                  <!-- Form -->
-                                  <div class="form-group mb-4">
-                                      <label for="email">Minggu Ke-</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
-                                      </div>
-                                      <label for="email">Kemampuan yang Diharapkan</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
-                                      </div>
-                                      <label for="email">Bahan Kajian & Referensi</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
-                                      </div>
-                                      <label for="email">Metode Pembelajaran & Alokasi Waktu</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
-                                      </div>
-                                      <label for="email">Pengalaman Belajar Mahasiswa</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
-                                      </div>
-                                      <label for="email">Kriteria Penilaian</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
-                                      </div>
-                                      <label for="email">Bobot</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="10"></textarea>
-                                      </div>
-                                       <br>
-                                      <div class="d-grid">
-                                          <button type="submit" class="btn btn-gray-800">Selesai</button>
-                                      </div>
-                                  </div>
-                          </div>
+                    
+                </div>
+            </div><br>
+                    <label for="table-responsive">Tabel Referensi</label>
+                    <div class="table-responsive" name="table-responsive">
+                        <table class="table table-centered table-nowrap mb-0 rounded">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th hidden>No</th>
+                                    <th class="border-0 rounded-start">Minggu ke-</th>
+                                    <th class="border-0">Materi</th>
+                                    <th class="border-0 rounded-end">Metode Pembelajaran</th>
+                                    <th class="border-0 rounded-end">Pengalaman Belajar</th>
+                                    <th class="border-0 rounded-end">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% mingguan.forEach((pm, index) => { %>
+                                <tr>
+                                    <td hidden><%=index+1%></td>
+                                    <td class="border-0"><%= pm.week %>  </td>
+                                    <td class="border-0 font-weight-bold"><%= pm.material %></td>
+                                    <td class="border-0 font-weight-bold"><%= pm.method %></td>
+                                    <td class="border-0 font-weight-bold"><%= pm.student_experience %></td>
+                                    <td class="border-0 font-weight-bold">
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#edit<%=index+1%>">Edit</button>
+                                        <!-- Modal Content -->
+                                        <div class="modal fade" id="edit<%=index+1%>" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h2 class="h6 modal-title">Edit Pertemuan Mingguan</h2>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <form action="/dosen/editmingguan" method="post">
+                                                    <div class="modal-body">
+                                                        <input type="hidden" name="id" value="<%= pm.id %>">
+                                                        <label>Minggu Ke- </label>
+                                                        <div class="input-group mb-3">
+                                                            <select class="form-select" name="week" placeholder="<%= pm.week %>" >
+                                                            <% for (var i = 1; i <=16;i++){%> 
+                                                            <option value="<%=i%>"><%=i%></option>
+                                                            <%}%>
+                                                            </select>
+                                                            </div>
+                                                        <label>Materi </label>
+                                                        <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="<%= pm.material %>" name="material" required>
+                                                        </div>
+                                                        <label>Metode Pembelajaran </label>
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group mb-3">
+                                                                <select class="form-select" name="method" placeholder="<%= pm.method %>">
+                                                                    <option value="Project Based">Project Based</option>
+                                                                    <option value="Cased Based">Cased Based</option>
+                                                                    </select>
+                                                            </div>
+                                                        </div>
+                                                        <label>Pengalaman Belajar </label>
+                                                        <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="<%= pm.student_experience %>" name="student_experience" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-primary">Edit</button>
+                                                        <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
+                                                    </div>
+                                                </form>
+                                                </div>
+                                            
+                                        </div>
+                                    </div>
+                                            <button type="button" class="btn btn-danger box" data-bs-toggle="modal" data-bs-target="#hapus<%=index+1%>">Hapus</button>
+                                                        <div class="modal fade" id="hapus<%=index+1%>" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h2 class="h6 modal-title">Peringatan!</h2>
+                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                    </div>
+                                                                    <form action="/dosen/hapusmingguan" method="post">
+                                                                        <div class="modal-body">
+                                                                            <p>Apakah Anda Yakin ingin Menghapus?</p>
+                                                                            <input type="hidden" name="id" value="<%=pm.id%>">
+                                                                            <input type="hidden" name="parent_id" value="<%=pm.parent_id%>">
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                                                            <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Batal</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                    </td>
+                                </tr>
+                                <% })%>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                        
 
-                          </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          </li>
-          <li class="nav-item">
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-default">Hapus</button>
-                          <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h2 class="h6 modal-title">Peringatan!</h2>
-                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                      </div>
-                                      <div class="modal-body">
-                                          <p>Apakah Anda Yakin ingin Menghapus?</p>
-                                      </div>
-                                      <div class="modal-footer">
-                                          <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
-                                          <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Tutup</button>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-          </li></button></td>
-</tr>
-<tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
-                <td><div class="nav-wrapper position-relative">
-                  <ul class="nav nav-pills nav-fill flex-column flex-sm-row">
-                      <li class="nav-item">
-                         <!-- Button Modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-tambah">
-                
-              Tambah</button>
-          <!-- Modal Content -->
-          <div class="modal fade" id="modal-tambah" tabindex="-1" role="dialog" aria-labelledby="modal-tambah"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-top" role="document">
-                  <div class="modal-content">
-                      <div class="modal-body p-0">
-                          <div class="card p-3 p-lg-4">
-                              <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
-                                  aria-label="Close"></button>
-                              <div class="text-center text-md-center mb-4 mt-md-0">
-                                  <h1 class="mb-0 h4">Tambah Pertemuan Minggunan</h1>
-                              </div>
-                              <form action="#" class="mt-4">
-                                  <!-- Form -->
-                                  <div class="form-group mb-4">
-                                      <label for="email">Minggu Ke-</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Kemampuan yang Diharapkan</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Bahan Kajian & Referensi</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Metode Pembelajaran & Alokasi Waktu</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Pengalaman Belajar Mahasiswa</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Kriteria Penilaian</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                      <label for="email">Bobot</label>
-                                      <div class="form-group">
-                                         <textarea class="form-group" name="" id="" cols="30" rows="1"></textarea>
-                                      </div>
-                                       <br>
-                                      <div class="d-grid">
-                                          <button type="submit" class="btn btn-gray-800">Selesai</button>
-                                      </div>
-                                  </div>
-                          </div>
-
-          </table>
-          
-          </body>
-          </html>
-      </tr>
-      <tr>
-          <td></td>
-        </tr>
-        <tr>
-            
 <%- include('layout/foot') %>

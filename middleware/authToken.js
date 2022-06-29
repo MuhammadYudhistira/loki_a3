@@ -1,7 +1,5 @@
 require('dotenv').config
 const jwt = require('jsonwebtoken');
-const { DECIMAL } = require('sequelize');
-const User = require("../models/users");
 
 function isAdmin(req,res,next) {
 

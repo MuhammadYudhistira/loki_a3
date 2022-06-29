@@ -16,7 +16,7 @@
                 <a href="/dosen">RPS Mata kuliah</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/dosen/detail">Detail Mata kuliah</a>
+                <a href="/dosen/detail-<%=rps.id %>">Detail Mata kuliah</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Revisi</li>
         </ol>
@@ -31,16 +31,15 @@
                     <div class="card-body">
                         
                         <ul>
-                        <li>Kode Mata Kuliah : JSI62125</li>
-                        <li>Semester : 4</li>
-                        <li>SKS : 3</li>
-                        <li>Kurikulum : 2021</li>
+                        <li>Kode Mata Kuliah : <%= rps.code %></li>
+                        <li>Semester : <%= rps.semester %></li>
+                        <li>SKS : <%= rps.credit %></li>
                         </ul>
                         
-                        <a href="/dosen/cpmk" class="btn btn-secondary" type="button">CPMK</a>
-                        <a href="/dosen/referensi" class="btn btn-secondary" type="button">Referensi</a>
-                        <a href="/dosen/penilaian" class="btn btn-secondary" type="button">Komponen Penilaian</a>
-                        <a href="/dosen/mingguan" class="btn btn-secondary" type="button">Pertemuan Mingguan</a><br><br>
+                        <a href="/dosen/detail-<%=rps.id %>/revisi-cpmk" class="btn btn-secondary" type="button">CPMK</a>
+                        <a href="/dosen/detail-<%=rps.id %>/revisi-referensi" class="btn btn-secondary" type="button">Referensi</a>
+                        <a href="/dosen/detail-<%=rps.id %>/revisi-penilaian" class="btn btn-secondary" type="button">Komponen Penilaian</a>
+                        <a href="/dosen/detail-<%=rps.id %>/revisi-mingguan" class="btn btn-secondary" type="button">Pertemuan Mingguan</a><br><br>
                         
                     </div>
                 </div>

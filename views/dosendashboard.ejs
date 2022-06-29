@@ -44,8 +44,11 @@
                       <td><%= matakuliah.name %></td>
                       <td><%= matakuliah.credit %></td>
                       <td>
+                        <% if (matakuliah.created_at == null) { %>
                         <a href="/dosen/tambah" type="button" class="btn btn-primary">Tambah</a>
+                        <%} else { %>
                         <a class="btn btn-secondary" type="button" href="/dosen/detail-<%=matakuliah.id%>">Detail</a>
+                        <% }%>
                       </td>
                     </tr>
                     <% }) %>
