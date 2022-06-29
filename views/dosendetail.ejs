@@ -148,158 +148,205 @@ tr:nth-child(even) {
 
                         <table>  <!---->
                                 
-                                <tr> <!--pembuatan baris-->
-                                    <th colspan="2"> <img src="../assets/img/pweb/logo.svg" height="150" width="150" alt="Volt Logo" ></th>
-                                    <th colspan="6" style="text-align: left;">RENCANA PEMBELAJARAN SEMESTER (RPS)<br> PROGRAM STUDI : Sistem Informasi<br> FAKULTAS /PPs: Teknologi Informasi <br>UNIVERSITAS ANDALAS </th>
-                                </tr>
-
-                                <tr>  <!--pembuatan baris-->
-                                    <th colspan="2" style="text-align: left;"  >Mata Kuliah</th> <!--pembuatan header-->
-                                    <th>KODE</th>
-                                    <th>Rumpun/Kelompok MK</th>
-                                    <th>Bobot(SKS)</th>
-                                    <th>Semester </th>
-                                    <th>Tgl Penyusunan</th>
-                                </tr>
-
-                                <tr>  <!--pembuatan baris-->
-                                    <th colspan="2" style="text-align: left;" ><%=rps.name%></th> <!--pembuatan kolom-->
-                                    <th><%= rps.code %></th>
-                                    <td></td>
-                                    <th><%= rps.credit %></th>
-                                    <th><%= rps.semester %></th>
-                                    <th></th>
-                                </tr>
-
-                                <tr> <!--pembuatan baris-->
-                                    <th style="background-color: #fcfcfc; text-align: left;"  rowspan="3" colspan="2" ><b>OTORISASI</b></th>
-                                    <th><h6><b>Dosen Pengembang RPS</b></h6></th>
-                                    <th colspan="2"><h6><b>Koordinator Rumpun MK</b></h6></th>
-                                    <th valign=middle colspan="3"><h6><b>Ka Program Studi</b></h6></th>
-                                <tr>
+                            <tr> <!--pembuatan baris-->
+                                <th colspan="2"> <img src="../assets/img/pweb/logo.svg" height="150" width="150" alt="Volt Logo" ></th>
+                                <th colspan="6" style="text-align: left;">RENCANA PEMBELAJARAN SEMESTER (RPS)<br> PROGRAM STUDI : Sistem Informasi<br> FAKULTAS /PPs: Teknologi Informasi <br>UNIVERSITAS ANDALAS </th>
+                            </tr>
+        
+                            <tr>  <!--pembuatan baris-->
+                                <th colspan="2" style="text-align: left;"  >Mata Kuliah</th> <!--pembuatan header-->
+                                <th>KODE</th>
+                                <th>Rumpun/Kelompok MK</th>
+                                <th>Bobot(SKS)</th>
+                                <th>Semester </th>
+                                <th>Tgl Penyusunan</th>
+                            </tr>
+        
+                            <tr>  <!--pembuatan baris-->
+                                <th colspan="2" style="text-align: left;" ><%=rps.name%></th> <!--pembuatan kolom-->
+                                <th><%= rps.code %></th>
+                                <td></td>
+                                <th><%= rps.credit %></th>
+                                <th><%= rps.semester %></th>
+                                <th></th>
+                            </tr>
+        
+                            <tr> <!--pembuatan baris-->
+                                <th style="background-color: #fcfcfc; text-align: left;"  rowspan="3" colspan="2" ><b>OTORISASI</b></th>
+                                <th><h6><b>Dosen Pengembang RPS</b></h6></th>
+                                <th colspan="2"><h6><b>Koordinator Rumpun MK</b></h6></th>
+                                <th valign=middle colspan="3"><h6><b>Ka Program Studi</b></h6></th>
+                            <tr>
+                            
+                            <tr height="40px"> <!--pembuatan baris-->
+                                    <th style="background-color: #fcfcfc"></th>
+                                    <th colspan="2" style="background-color: #fcfcfc"></th>
+                                    <th colspan="2" style="background-color: #fcfcfc"></th>
+                            <tr>
+        
+                            <tr> <!--pembuatan baris--> <!---->
+                                <div>                                     
+                                    <th rowspan="13" style="background-color: #fcfcfc; text-align: left;" valign=top >Capaian Pembelajaran (CP)</th> 
+                                </div>
+        
+                                <div>
+                                    <th style="background-color: rgb(215, 213, 213); text-align: left;" colspan="2" >CP Program Studi</th>
+                                </div>
                                 
-                                <tr height="40px"> <!--pembuatan baris-->
-                                        <th style="background-color: #fcfcfc"></th>
-                                        <th colspan="2" style="background-color: #fcfcfc"></th>
-                                        <th colspan="2" style="background-color: #fcfcfc"></th>
+                                <div>
+                                    <tr>
+                                        <td style="background-color: #fcfcfc">CP-1</td>
+                                        <td style="background-color: #fcfcfc; text-align: left;" colspan="6" >Mengidentifikasi, memformulasikan dan memecahkan  permasalahan kebutuhan informasi dari suatu organisasis</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td style="background-color: #fcfcfc">CP-2</td>
+                                        <td style="background-color: #fcfcfc; text-align: left;" colspan="6" >Mengintegrasikan solusi berbasis teknologi informasi secara efektif pada suatu organisasi</td>
+                                    </tr>
+                                    
+                                    <tr>                                          
+                                        <td style="background-color: #fcfcfc" rowspan="2">CP-3</td>
+                                        <td style="background-color: #fcfcfc; text-align: left;" colspan="6" rowspan="2" >Menerapkan konsep-konsep dasar dalam merencanakan Sistem Informasi, merancang Sistem Informasi, membangun Sistem Informasi, mengoperasikan Sistem Informasi, dan mengevaluasi Sistem Informasi </td>
+                                        <tr></tr>
+                                    </tr>
+                                </div>
+                                
+        
+                            <tr> <!--pembuatan baris-->
+                                <th style="background-color: rgb(215, 213, 213); text-align: left;" colspan="2">CP Mata Kuliah</th>
+        
                                 <tr>
-
-                                <tr> <!--pembuatan baris--> <!---->
+                                    <td style="background-color: #fcfcfc">1</td>
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6" >Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web. (CP-1, CP-2)</td>
+                                </tr>
+        
+                                <tr>
+                                    <td style="background-color: #fcfcfc">2</td>
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6" > Mahasiswa mampu menggunakan salah satu technology stack untuk membangun aplikasi berbasis web. (CP-1, CP-2)</td>
+                                </tr>                       
+        
+                                <tr>
+                                    <td style="background-color: #fcfcfc">3</td>
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6" >Mahasiswa mampu menggunakan pemograman asynchronous. (CP-2, CP-3)</td>
+                                </tr>
+        
+                                <tr>
+                                    <td style="background-color: #fcfcfc">4</td>
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6" >Mahasiswa mampu menerapkan keamanan untuk situs web. (CP-2, CP-3)</td>
+                                </tr>
+        
+                                <tr>
+                                    <td style="background-color: #fcfcfc">5</td>
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6" >Mahasiswa mampu menggunakan dan mendesain format data JSON. (CP-2, CP-3)</td>
+                                </tr>
+        
+                                <tr>
+                                    <td style="background-color: #fcfcfc">6</td>
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6" >Mahasiswa mampu deploy aplikasi web ke internet. (CP-2)</td>
+                                </tr>
+        
+                                <tr>
+                                    <td style="background-color: #fcfcfc">7</td>
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6" >Mahasiswa mampu mendemonstrasikan keterampilan bekerja sama dengan tim. (CP-3)</td>
+                                </tr>
+                            </tr>
+                          
+                            <tr> <!--pembuatan baris-->
+                               <th style="background-color: #fcfcfc; text-align: left;" colspan="2">Deskripsi Singkat <br>
+                                Mata Kuliah</th>
+                                <td style="background-color: #fcfcfc; text-align: left;" colspan="6"><%= rps.description%></td>
+                               <tr></tr>
+        
+                            </tr>
+        
+                            <tr><!--pembuatan baris-->
+                                <th style="background-color: #fcfcfc; text-align: left;" colspan="2">Materi Pembelajaran/<br>Pokok Bahasan</th> 
+                                
+                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="5">Secara garis besar terdapat 2 materi yang akan diberikan yaitu: <br> 1.	Server Side Web Programming <br>   Meliputi pemrograman web yang dilakukan pada bagian server dengan menggunakan bahasa pemograman Javascript. <br> 2.	Client Side Web Programming <br>Pemrograman web pada sisi client (browser) yang dilakukan dengan menggunakan bahasa pemrograman javascript
+                                    </td>                                      
+                            </tr>
+                                
+        
+                            <tr> <!--pembuatan baris -->
+                                <div>
+                                   <tr>
+                                        <th rowspan="5" style="background-color: #fcfcfc; text-align: left;" valign=top colspan="2">Pustaka</th> 
+                                        <th style="text-align: left; background-color: rgb(215, 213, 213);" colspan="1" >Utama :</th>
+                                   </tr>                                    
+                                </div>
+                                                                  
+                                <div>
+                                    <tr>
+                                        <td colspan="8" style="background-color: #fcfcfc; text-align: left;">1.	Matt Doyle, 2009, “Beginning PHP 5.3”, Wrox <br>
+                                            2.	Nicholas Zakas, 2012, “Professional Javascript for Web Developer”, John Wiley & Sons
+                                        </td>                                        
+                                    </tr>  
+                                </div>                                 
+        
+                                <tr>
+                                    <th style="text-align: left; background-color: rgb(215, 213, 213);" colspan="1">Pendukung :</th>
+                                    <tr>
+                                        <td colspan="8" style="background-color: #fcfcfc; text-align: left;"> 3.	Mark Pilgrim, 2010, “HTML5 Up and Running”, O’Reilly <br> 4.	Steve Fulton; Jeff Fulton, 2011, “HTML5 Canvas”, O’Reilly <br> 5.	S. Stefanor, 2010, “Javascript Patterns”, O’Reilly
+                                        </td>                                    
+                                    </tr>
+                                </tr>
+                            </tr>
+        
+                           
+                            <tr> <!--pembuatan baris-->
+                                <tr>
+                                    <th style="background-color: #fcfcfc; text-align: left;"  rowspan="5" colspan="2" ><b>Media Pembelajaran</b></th>
+                                    <th style="text-align: left; background-color: rgb(215, 213, 213);" colspan="2" rowspan="5" valign=top>Perangkat Lunak :</th>
+                                    <th style="text-align: left; background-color: rgb(215, 213, 213);" colspan="3" rowspan="5" valign=top>Perangkat Keras :</th>                                      
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                </tr>
+                            </tr>
+        
+                           <tr>
+                                <tr>
+                                    <td colspan="2" style="background-color: #fcfcfc"></td>
+                                    <td colspan="2" style="text-align: left; background-color: #fcfcfc" valign="top">Power point<br>Code Editor (VS Code)<br>Browser<br>NodeJS<br>Rest Client (Postman)<br>Database server (MySQL)<br>Version Control (Git)</td>
+                                    <td colspan="3"style="text-align: left; background-color: #fcfcfc" valign="top">Projector<br>Laptop</td>
+                                </tr>
+                           </tr>
+        
+                            <!--pembuatan baris baru-->
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+        
+                            <tr>  <!--pembuatan baris-->
+                                <tr>
+                                    <div>                                    
+                                        <th style="background-color: #fcfcfc; text-align: left;" colspan="2" ><i>Team Teaching</i></th> 
+                                        <td style="background-color: #fcfcfc; text-align: left;" colspan="6">-</td>
+                                    </div>
+                                    
+                                </tr>                               
+                            </tr>
+        
+                            <tr>  <!--pembuatan baris-->
+                                <tr>
                                     <div>                                     
-                                        <th rowspan="13" style="background-color: #fcfcfc; text-align: left;" valign=top >Capaian Pembelajaran (CP)</th> 
-                                    </div>
-
-                                    <div>
-                                        <th style="background-color: rgb(215, 213, 213); text-align: left;" colspan="2" >CP Program Studi</th>
-                                    </div>
-                                    
-                                    <div>
-                                        <% cpl.forEach((cp) => { %>
-                                        <tr>
-                                            <td style="background-color: #fcfcfc"><%=cp.code%></td>
-                                            <td style="background-color: #fcfcfc; text-align: left;" colspan="6" ><%=cp.name%></td>
-                                        <tr>
-                                            <% })%>
-
-                                    
-
-                                <tr> <!--pembuatan baris-->
-                                    <th style="background-color: rgb(215, 213, 213); text-align: left;" colspan="2">CP Mata Kuliah</th>
-                                    <% cpmk.forEach((cc, index) => { %>
-                                    <tr>
-                                        <td style="background-color: #fcfcfc"><%= index+1 %></td>
-                                        <td style="background-color: #fcfcfc; text-align: left;" colspan="6" ><%= cc.name %></td>
-                                    </tr>
-                                    <% })%>
-                                    
-
-                                </tr>
-                              
-                                <tr> <!--pembuatan baris-->
-                                   <th style="background-color: #fcfcfc; text-align: left;" colspan="2">Deskripsi Singkat <br>
-                                    Mata Kuliah</th>
-                                    <td style="background-color: #fcfcfc; text-align: left;" colspan="6"><%= rps.description%></td>
-                                   <tr></tr>
-
-                                </tr>
-
-                                <tr><!--pembuatan baris-->
-                                    <th style="background-color: #fcfcfc; text-align: left;" colspan="2">Materi Pembelajaran/<br>Pokok Bahasan</th> 
-                                    
-                                        <td style="background-color: #fcfcfc; text-align: left;" colspan="5">Secara garis besar terdapat 2 materi yang akan diberikan yaitu: <br> 1.	Server Side Web Programming <br>   Meliputi pemrograman web yang dilakukan pada bagian server dengan menggunakan bahasa pemograman Javascript. <br> 2.	Client Side Web Programming <br>Pemrograman web pada sisi client (browser) yang dilakukan dengan menggunakan bahasa pemrograman javascript
-                                        </td>                                      
-                                </tr>
-                                    
-
-                                <tr> <!--pembuatan baris -->
-                                    <div>
-                                       <tr>
-                                            <th rowspan="5" style="background-color: #fcfcfc; text-align: left;" valign=top colspan="2">Pustaka</th> 
-                                            <th style="text-align: left; background-color: rgb(215, 213, 213);" colspan="1" >Utama :</th>
-                                       </tr>                                    
-                                    </div>
-                                                                      
-                                    <div>
-                                        <% referensi.forEach((ref, index) => { %>
-                                        <tr>
-                                            <td colspan="8" style="background-color: #fcfcfc; text-align: left;"><%=index+1%>. <%=ref.author%>, <%=ref.year%>,"<%= ref.title%>",<%=ref.publisher%> 
-                                            </td>                                        
-                                        </tr> 
-                                        <% })%> 
-                                    </div>                                 
-
-                                    <tr>
-                                        <th style="text-align: left; background-color: rgb(215, 213, 213);" colspan="1">Pendukung :</th>
-                                        <% referensi2.forEach((ref2, index) => { %>
-                                        <tr>
-                                            <td colspan="8" style="background-color: #fcfcfc; text-align: left;"> <%=index+1%>. <%=ref2.author%>, <%=ref2.year%>,"<%= ref2.title%>",<%=ref2.publisher%>
-                                            </td>                                    
-                                        </tr>
-                                        <% })%> 
-                                    </tr>
-                                </tr>
-
-                                <!--pembuatan baris baru-->
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-
-                                <tr>  <!--pembuatan baris-->
-                                    <tr>
-                                        <div>                                    
-                                            <th style="background-color: #fcfcfc; text-align: left;" colspan="2" ><i>Team Teaching</i></th> 
-                                            <td style="background-color: #fcfcfc; text-align: left;" colspan="6">-</td>
-                                        </div>
-                                        
-                                    </tr>                               
-                                </tr>
-
-                                <tr>  <!--pembuatan baris-->
-                                    <tr>
-                                        <div> 
-                                            
-                                            <tr>    
-                                                <th rowspan="3" style="background-color: #fcfcfc; text-align: left;" colspan="2" ><i>Assessment</i></th>                               
-                                            <% penilaian.forEach((nilai,index) => { %>
-                                            
-                                            <td rowspan="<%=index+1%>" style="background-color: #fcfcfc; text-align: left;" colspan="6"><%=nilai.name%> : <%=nilai.percentage%>%</td>
-                                            </tr>
-                                            <% })%> 
-                                        </div>                                       
-                                    </tr>                              
-                                </tr>
-
-
-                                <tr>  <!--pembuatan baris-->
-                                    <tr>
-                                        <div>                                    
-                                            <th style="background-color: #fcfcfc; text-align: left;" colspan="2" valign=top  >Mata Kuliah Syarat</th> 
-                                            <td style="background-color: #fcfcfc; text-align: left;" colspan="6">1.Struktur Data dan Algoritma<br>2.	Dasar-Dasar Pemrograman<br>3.	Pemograman Berorientasi Objek</td>
-                                        </div>                                       
-                                    </tr>                               
-                                </tr>
-
-                        </table>
+                                        <th style="background-color: #fcfcfc; text-align: left;" colspan="2" ><i>Assessment	</i></th> 
+                                        <td style="background-color: #fcfcfc; text-align: left;" colspan="6">Project, Tugas, Quiz, UTS, UAS</td>
+                                    </div>                                       
+                                </tr>                              
+                            </tr>
+        
+        
+                            <tr>  <!--pembuatan baris-->
+                                <tr>
+                                    <div>                                    
+                                        <th style="background-color: #fcfcfc; text-align: left;" colspan="2" valign=top  >Mata Kuliah Syarat</th> 
+                                        <td style="background-color: #fcfcfc; text-align: left;" colspan="6">1.Struktur Data dan Algoritma<br>2.	Dasar-Dasar Pemrograman<br>3.	Pemograman Berorientasi Objek</td>
+                                    </div>                                       
+                                </tr>                               
+                            </tr>
+        
+                    </table>
                     </div>
                 <div class="card-body"></div>
             
