@@ -36,20 +36,21 @@ controller.detailmatkul = async (req, res) => {
 
 controller.tambahRPS = async (req, res) => {
   const id = req.params.id
-  const rps = await model.course_plans.findAll({where:{id} ,attributes: [ 'id', 'code', 'name', 'semester', 'credit']})
+  const rps = await model.course_plans.findOne({where:{id} ,attributes: [ 'id', 'code', 'name', 'semester', 'credit']})
   const cpmk = await model.course_los.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'type', 'code', 'name', 'parent_id']})
   const referensi = await model.course_plan_references.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'title', 'author', 'publisher', 'year', 'description']})
-
-  res.render("dosen-tambahRPS", {rps,cpmk,referensi})
+  const mingguan = await model.course_plan_details.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'week','material','method','student_experience']})
+  res.render("dosen-tambahRPS", {rps,cpmk,referensi,mingguan})
 }
 
 controller.editRPS = async (req, res) => {
   const id = req.params.id
-  const rps = await model.course_plans.findAll({where:{id} ,attributes: [ 'id', 'code', 'name', 'semester', 'credit']})
+  const rps = await model.course_plans.findOne({where:{id} ,attributes: [ 'id', 'code', 'name', 'semester', 'credit']})
   const cpmk = await model.course_los.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'type', 'code', 'name', 'parent_id']})
   const referensi = await model.course_plan_references.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'title', 'author', 'publisher', 'year', 'description']})
-
-  res.render("dosen-editRPS", {rps,cpmk,referensi})
+  const mingguan = await model.course_plan_details.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'week','material','method','student_experience']})
+  const penilaian = await model.course_plan_assessments.findAll({where:{course_plan_id : id} ,attributes: [ 'id','name','percentage']})
+  res.render("dosen-editRPS", {rps,cpmk,referensi,mingguan,penilaian})
 }
 
 //Revisi
