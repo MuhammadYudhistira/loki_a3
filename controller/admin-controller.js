@@ -10,6 +10,14 @@ controller.listMatakuliah = async (req, res) => {
     res.render('admin-listmatkul', {kurikulum, matkul});
 }
 
+controller.CPMK = async (req, res) => {
+    const id = req.params.id
+    const matkul = await model.courses.findOne({ where: { id: id }, attributes: ['name']})
+    const rps = await model.course_plans.findOne({ where: { course_id: id }, attributes:['id', 'name']})
+    // const rps = await model.course_plans.findAll()
+    res.render('admin-listmatkul', {kurikulum, matkul});
+}
+
 controller.tambahMatkul = async (req, res) => {
 
     const { kurikulum,  kodeMatkul, nama, alias, SKS, semester, deskripsi } = req.body

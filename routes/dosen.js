@@ -34,6 +34,7 @@ router.post("/tambahcpmk", controller.dosen.tambahcpmk)
 router.post("/editcpmk", controller.dosen.editcpmk)
 router.post("/hapuscpmk", controller.dosen.hapuscpmk)
 
+
 //Mingguan
 router.post("/tambahmingguan", controller.dosen.tambahMingguan)
 router.post("/editmingguan", controller.dosen.editMingguan)
