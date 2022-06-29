@@ -10,7 +10,6 @@ controller.listmatkul = async (req, res) => {
   if (!token) return res.status(200).send("tidak ada token")
 
   const nip = jwt.verify(token, process.env.TOKEN_SECRET)
-
   const matkul = await sequelize.query(
     'SELECT course_plans.code, course_plans.name, course_plans.credit, course_plans.rev, course_plans.semester, course_plans.id, course_plans.created_by, course_plans.created_at FROM course_plan_lecturers JOIN course_plans ON course_plan_lecturers.course_plan_id = course_plans.id JOIN lecturers ON course_plan_lecturers.lecturer_id = lecturers.id WHERE lecturers.reg_id= :nipDosen;',
     {
@@ -18,15 +17,39 @@ controller.listmatkul = async (req, res) => {
         type: QueryTypes.SELECT
     }
 )
-
     res.render("dosendashboard", {matkul})   
 }
 
 controller.detailmatkul = async (req, res) => {
   const id = req.params.id
-  const rps = await model.course_plans.findOne({where:{id} ,attributes: [ 'id', 'code', 'name', 'semester', 'credit']})
+  const kurikulum = await model.curricula.findAll()
+  const rps = await model.course_plans.findOne({where:{id} })
+  const cpmk = await model.course_los.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'type', 'code', 'name', 'parent_id']})
+  const cpl = await model.curriculum_los.findAll({where:{curriculum_id : 1} ,attributes: [ 'id', 'code', 'name']})
+  const referensi = await model.course_plan_references.findAll({where:{[Op.and]: [{course_plan_id : id},{description: 'Utama'}] }})
+  const referensi2 = await model.course_plan_references.findAll({where:{[Op.and]: [{course_plan_id : id},{description: 'Pendukung'}] }})
+  const penilaian = await model.course_plan_assessments.findAll({where:{course_plan_id : id} ,attributes: [ 'id','name','percentage']})
+  const mingguan = await model.course_plan_details.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'week','material','method','student_experience']})
+  res.render("dosendetail", {rps, cpmk, cpl, referensi,referensi2, penilaian, mingguan, kurikulum})
+  
+}
 
-  res.render("dosendetail", {rps})
+controller.tambahRPS = async (req, res) => {
+  const id = req.params.id
+  const rps = await model.course_plans.findAll({where:{id} ,attributes: [ 'id', 'code', 'name', 'semester', 'credit']})
+  const cpmk = await model.course_los.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'type', 'code', 'name', 'parent_id']})
+  const referensi = await model.course_plan_references.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'title', 'author', 'publisher', 'year', 'description']})
+
+  res.render("dosen-tambahRPS", {rps,cpmk,referensi})
+}
+
+controller.editRPS = async (req, res) => {
+  const id = req.params.id
+  const rps = await model.course_plans.findAll({where:{id} ,attributes: [ 'id', 'code', 'name', 'semester', 'credit']})
+  const cpmk = await model.course_los.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'type', 'code', 'name', 'parent_id']})
+  const referensi = await model.course_plan_references.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'title', 'author', 'publisher', 'year', 'description']})
+
+  res.render("dosen-editRPS", {rps,cpmk,referensi})
 }
 
 //Revisi
@@ -42,7 +65,9 @@ controller.cpmk = async (req, res) => {
   const id = req.params.id
   const rps = await model.course_plans.findOne({where:{id} ,attributes: [ 'id', 'code', 'name', 'semester', 'credit']})
   const cpmk = await model.course_los.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'type', 'code', 'name', 'parent_id']})
-  res.render("dosenCPMK", {rps, cpmk})
+  const penilaian = await model.course_plan_assessments.findAll({where:{course_plan_id : id} ,attributes: [ 'id','name','percentage']})
+  const mingguan = await model.course_plan_details.findAll({where:{course_plan_id : id} ,attributes: [ 'id', 'week','material','method','student_experience']})
+  res.render("dosenCPMK", {rps, cpmk, penilaian, mingguan})
 }
 
 
@@ -50,7 +75,7 @@ controller.tambahcpmk = async (req, res) => {
   const {course_plan_id,name,code, parent_id,type} = req.body
 
   const CPMKAda = await model.course_los.findOne({ 
-      where:{[Op.or]: [{ name }, {code}]} })
+      where:{[Op.and]: [{ course_plan_id }, {code}]} })
     if (CPMKAda) return res.status(400).send('CPMK sudah ada')
 
     try{
@@ -61,6 +86,7 @@ controller.tambahcpmk = async (req, res) => {
         parent_id,
         type
     })
+    console.log("CPMK berhasil ditambahkan");
     res.redirect('back')
   }catch(err){
     console.log(err)
@@ -107,7 +133,7 @@ controller.tambahReferensi = async (req, res) => {
   const {course_plan_id, title, author, publisher, year, description} = req.body
 
   const referensiAda = await model.course_plan_references.findOne({ 
-    where:{[Op.or]: [{ title }, { author }, { publisher}]} })
+    where:{[Op.and]: [{course_plan_id},{ title }, { author }, { publisher}]} })
     if (referensiAda) return res.status(400).send('Referensi sudah ada')
 
     try{
@@ -172,7 +198,7 @@ controller.tambahPenilaian = async (req, res) => {
   const {course_plan_id,name, percentage, flag} = req.body
 
   const penilaianAda = await model.course_plan_assessments.findOne({ 
-    where:{[Op.or]: { name }} })
+    where:{[Op.and]: [{course_plan_id},{ name }]} })
     if (penilaianAda) return res.status(400).send('penilaian sudah ada')
 
     try{
@@ -230,7 +256,7 @@ controller.tambahMingguan = async (req, res) => {
   const {course_plan_id,week,material,method,student_experience} = req.body
 
   const mingguanAda = await model.course_plan_details.findOne({ 
-    where:{[Op.or]: [{ week }]} })
+    where:{[Op.and]: [{course_plan_id},{ week }]}})
     if (mingguanAda) return res.status(400).send('Penilaian Mingguan sudah ada')
 
     try{

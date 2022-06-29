@@ -8,6 +8,10 @@ router.use( express.static( "public" ) );
 router.get('/', controller.dosen.listmatkul)
 router.get('/detail-:id', controller.dosen.detailmatkul)
 
+//tambah
+router.get('/detail-:id/tambah', controller.dosen.tambahRPS, controller.dosen.tambahcpmk, controller.dosen.tambahReferensi, controller.dosen.tambahPenilaian, controller.dosen.tambahMingguan)
+router.get('/detail-:id/edit', controller.dosen.editRPS, controller.dosen.tambahcpmk, controller.dosen.tambahReferensi, controller.dosen.tambahPenilaian, controller.dosen.tambahMingguan)
+
 //revisi
 router.get('/detail-:id/revisi', controller.dosen.revisirps)
 router.get('/detail-:id/revisi-cpmk', controller.dosen.cpmk)
@@ -39,7 +43,7 @@ router.get('/tambah', (req,res) => {
     res.render('tambahRPS')
 })
 router.get('/edit', (req,res) => {
-    res.render('dosenedit')
+    res.render('dosen-editRPS')
 })
 
 
