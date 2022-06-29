@@ -1,0 +1,135 @@
+<%- include('layout/head', {judul: 'Beranda'}) %>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+    <div class="d-block mb-4 mb-md-0">
+        <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+            <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                <li class="breadcrumb-item">
+                    <a href="/admin">
+                        <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/admin/matakuliah">Mata kuliah</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Laporan</li>
+            </ol>
+        </nav>
+        <h2 class="h2">CPL ke CPMK</h2>
+    </div>
+</div>
+
+<style>
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      border:2px solid gray
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 5px;
+      border:2px solid rgb(128, 128, 128)
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    
+    .box{
+        margin-left: 5px;
+    }
+    
+    </style>
+
+<div class="card" id="area">
+
+    <div class="card-body">
+        
+        <div class="col-md-6">
+            <div class="form-group row align-items-center">
+                <div class="col-lg-4 col-3">
+                </div>
+
+                <div class="col-lg-5 col-9">
+                </div>
+
+            </div>
+        </div>
+
+
+<table>
+    <tr>  <!--pembuatan baris-->
+        <th colspan="2" style="text-align: center;">CPL ke CPMK</th> <!--pembuatan header-->
+        <th>(CP-1)</th>
+        <th>(CP-2)</th>
+        <th>(CP-3)</th>
+    </tr>
+
+    <tr style="background-color: #fcfcfc">  <!--pembuatan baris-->
+        <th colspan="2" style="text-align: center;">Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web. (CP-1, CP-2)</th> <!--pembuatan header-->
+        <td>Mengidentifikasi, memformulasikan dan memecahkan<br> permasalahan kebutuhan informasi dari suatu organisasi<br></td>
+        <td>Mengintegrasikan solusi berbasis teknologi informasi<br>secara efektif pada suatu organisasi</td>
+        <td></td>
+    </tr>
+
+    <tr>  <!--pembuatan baris-->
+        <th colspan="2" style="text-align: center;">Mahasiswa mampu menggunakan salah satu technology stack untuk membangun aplikasi berbasis web. (CP-1, CP-2)</th> <!--pembuatan header-->
+        <td>Mengidentifikasi, memformulasikan dan memecahkan<br> permasalahan kebutuhan informasi dari suatu organisasi<br></td>
+        <td>Mengintegrasikan solusi berbasis teknologi informasi<br>secara efektif pada suatu organisasi</td>
+        <td></td>
+    </tr>
+
+    <tr style="background-color: #fcfcfc">  <!--pembuatan baris-->
+        <th colspan="2" style="text-align: center;"  >Mahasiswa mampu menggunakan pemograman asynchronous. (CP-2, CP-3)</td></th> <!--pembuatan header-->
+        <td></td>
+        <td>Mengintegrasikan solusi berbasis teknologi informasi<br>secara efektif pada suatu organisasi</td>
+        <td>Menerapkan konsep-konsep dasar dalam merencanakan Sistem Informasi, merancang Sistem Informasi,<br>membangun Sistem Informasi, mengoperasikan Sistem Informasi, dan mengevaluasi Sistem Informasi<br></td>
+    </tr>
+
+    <tr>  <!--pembuatan baris-->
+        <th colspan="2" style="text-align: center;">Mahasiswa mampu menerapkan keamanan untuk situs web. (CP-2, CP-3)</td></th> <!--pembuatan header-->
+        <td></td>
+        <td>Mengintegrasikan solusi berbasis teknologi informasi<br>secara efektif pada suatu organisasi</td>
+        <td>Menerapkan konsep-konsep dasar dalam merencanakan Sistem Informasi, merancang Sistem Informasi,<br>membangun Sistem Informasi, mengoperasikan Sistem Informasi, dan mengevaluasi Sistem Informasi<br></td>
+    </tr>
+
+    <tr style="background-color: #fcfcfc">  <!--pembuatan baris-->
+        <th colspan="2" style="text-align: center;">Mahasiswa mampu menggunakan dan mendesain format data JSON. (CP-2, CP-3)</td></th> <!--pembuatan header-->
+        <td></td>
+        <td>Mengintegrasikan solusi berbasis teknologi informasi<br>secara efektif pada suatu organisasi</td>
+        <td>Menerapkan konsep-konsep dasar dalam merencanakan Sistem Informasi, merancang Sistem Informasi,<br>membangun Sistem Informasi, mengoperasikan Sistem Informasi, dan mengevaluasi Sistem Informasi<br></td>
+    </tr>
+
+    <tr>  <!--pembuatan baris-->
+        <th colspan="2" style="text-align: center;">Mahasiswa mampu deploy aplikasi web ke internet. (CP-2)</td></th> <!--pembuatan header-->
+        <td></td>
+        <td>Mengintegrasikan solusi berbasis teknologi informasi<br>secara efektif pada suatu organisasi</td>
+        <td></td>
+    </tr>
+
+
+    <tr style="background-color: #fcfcfc">  <!--pembuatan baris-->
+        <th colspan="2" style="text-align: center;"></td>Mahasiswa mampu mendemonstrasikan keterampilan bekerja sama dengan tim. (CP-3)</th> <!--pembuatan header--> 
+        <td></td>
+        <td></td>
+        <td>Menerapkan konsep-konsep dasar dalam merencanakan Sistem Informasi, merancang Sistem Informasi,<br>membangun Sistem Informasi, mengoperasikan Sistem Informasi, dan mengevaluasi Sistem Informasi<br></td>
+    </tr>
+
+    <tr>
+
+    </tr>
+
+
+</table>
+
+
+<%- include('layout/foot-datatable') %>
